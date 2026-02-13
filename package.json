@@ -1,0 +1,9 @@
+{
+    "name": "jf-digitalstudio",
+    "version": "1.0.0",
+    "description": "JF Digital Studio - Marketing y Sistemas para Negocios Reales",
+    "scripts": {
+        "dev": "npx serve . -l 3000",
+        "build": "echo 'Static site - no build step required'"
+    }
+}
