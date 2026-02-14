@@ -852,7 +852,7 @@ textarea {
 }
 
 .process-number {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.18em;
     font-weight: 700;
@@ -1029,7 +1029,7 @@ textarea {
 }
 
 /* =============================================
-   STATS SECTION
+   STATS / VALUE PROPOSITION SECTION
    ============================================= */
 .stats-bar {
     display: grid;
@@ -1042,7 +1042,39 @@ textarea {
 .stat-item {
     background: var(--warm-beige);
     padding: 2.5rem;
-    text-align: center;
+    text-align: left;
+}
+
+/* Value proposition items */
+.value-item {
+    position: relative;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}
+
+.value-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--soft-beige);
+    border: 2px solid var(--border-medium);
+    margin-bottom: 1.25rem;
+}
+
+.value-title {
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: var(--charcoal);
+    line-height: 1.3;
+}
+
+.value-desc {
+    font-size: 0.88rem;
+    color: var(--muted-charcoal);
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 .stat-number {
@@ -1066,12 +1098,118 @@ textarea {
     transition: all 0.3s;
 }
 
+/* Service card individual borders */
+.service-card {
+    border: 1px solid var(--border-light);
+}
+
 /* =============================================
    CTA SECTION
    ============================================= */
 .cta-section {
     background: var(--soft-beige);
     border-top: 1px solid var(--border-light);
+}
+
+/* =============================================
+   FAQ SECTION
+   ============================================= */
+.faq-section {
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--border-light);
+}
+
+.faq-item:first-child {
+    border-top: 1px solid var(--border-light);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--charcoal);
+    text-align: left;
+    transition: color var(--transition-fast);
+    gap: 1rem;
+}
+
+.faq-question:hover {
+    color: var(--accent);
+}
+
+.faq-icon {
+    font-size: 1.25rem;
+    color: var(--muted-charcoal);
+    transition: transform var(--transition-base);
+    flex-shrink: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+    color: var(--accent);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    padding: 0 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 0 1.5rem 0;
+}
+
+.faq-answer p {
+    color: var(--muted-charcoal);
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.faq-answer ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    color: var(--muted-charcoal);
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.faq-answer ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
 }
 
 .cta-inner {
@@ -1134,6 +1272,10 @@ textarea {
 .contact-channel .material-symbols-outlined {
     color: var(--accent);
     font-size: 1.2rem;
+}
+
+.contact-icon {
+    flex-shrink: 0;
 }
 
 .contact-channel-text {
@@ -1496,6 +1638,10 @@ textarea {
     .footer-links {
         gap: 2rem;
     }
+
+    .faq-question {
+        font-size: 1.05rem;
+    }
 }
 
 /* --- Mobile (768px) — iPhone landscape & small tablets --- */
@@ -1509,6 +1655,29 @@ textarea {
         min-height: 100svh;
         /* iOS safe viewport height */
         padding-top: 70px;
+    }
+
+    /* Value props on mobile */
+    .value-item {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .value-title {
+        font-size: 1.05rem;
+    }
+
+    .value-desc {
+        font-size: 0.82rem;
+    }
+
+    /* FAQ on mobile */
+    .faq-question {
+        font-size: 1rem;
+        padding: 1.25rem 0;
+    }
+
+    .faq-answer p {
+        font-size: 0.9rem;
     }
 
     .hero h1 {

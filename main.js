@@ -302,6 +302,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    // ===== FAQ ACCORDION =====
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+
+            // Close all other items
+            faqItems.forEach(other => {
+                if (other !== item) {
+                    other.classList.remove('active');
+                    other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                }
+            });
+
+            // Toggle current
+            item.classList.toggle('active');
+            question.setAttribute('aria-expanded', !isActive);
+        });
+    });
+
+
     // ===== PREFERS REDUCED MOTION =====
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         // Immediately show all elements
