@@ -1134,8 +1134,8 @@ textarea {
 }
 
 .ejemplo-caption {
-    text-align: center;
-    max-width: 600px;
+    text-align: left;
+    max-width: 720px;
     margin: 0 auto;
 }
 
