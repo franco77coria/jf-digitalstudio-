@@ -1120,7 +1120,7 @@ textarea {
 }
 
 .ejemplo-image-wrapper {
-    max-width: 900px;
+    max-width: 720px;
     margin: 0 auto 2rem;
     border: 1px solid var(--border-light);
     background: var(--warm-beige);
