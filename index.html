@@ -1,695 +1,1476 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 
-    <!-- SEO Meta Tags -->
-    <title>JF Digital Studio | Marketing y Sistemas para Negocios Reales</title>
-    <meta name="description"
-        content="En JF Digital Studio ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura. Basados en Córdoba, Argentina.">
-    <meta name="keywords"
-        content="marketing digital, sistemas para negocios, desarrollo web, gestión de redes sociales, automatización, Córdoba, Argentina, JF Digital Studio">
-    <meta name="author" content="JF Digital Studio">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://jf-digitalstudio.com">
+<!-- SEO Meta Tags -->
+<title>JF Digital Studio — Estructura para negocios que crecen</title>
+<meta name="description" content="En JF Digital Studio ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura. Basados en Córdoba, Argentina." />
+<meta name="keywords" content="marketing digital, sistemas para negocios, desarrollo web, gestión de redes sociales, automatización, Córdoba, Argentina, JF Digital Studio" />
+<meta name="author" content="JF Digital Studio" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://jf-digitalstudio.com" />
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="JF Digital Studio | Marketing y Sistemas para Negocios Reales">
-    <meta property="og:description"
-        content="Ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura.">
-    <meta property="og:url" content="https://jf-digitalstudio.com">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_AR">
-    <meta property="og:site_name" content="JF Digital Studio">
-    <meta property="og:image" content="https://jf-digitalstudio.com/og-image.png">
+<!-- Open Graph -->
+<meta property="og:title" content="JF Digital Studio — Estructura para negocios que crecen" />
+<meta property="og:description" content="Ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura." />
+<meta property="og:url" content="https://jf-digitalstudio.com" />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_AR" />
+<meta property="og:site_name" content="JF Digital Studio" />
+<meta property="og:image" content="https://jf-digitalstudio.com/og-image.png" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JF Digital Studio | Marketing y Sistemas para Negocios Reales">
-    <meta name="twitter:description"
-        content="Ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura.">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="JF Digital Studio — Estructura para negocios que crecen" />
+<meta name="twitter:description" content="Ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con estructura." />
+<meta name="twitter:image" content="https://jf-digitalstudio.com/og-image.png" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' font-family='serif' font-weight='bold'%3EJF%3C/text%3E%3C/svg%3E">
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='84' font-family='Georgia, serif' font-style='italic' fill='%230E0D0B'%3EJF%3Ctspan fill='%23D7421C'%3E.%3C/tspan%3E%3C/text%3E%3C/svg%3E" />
 
-    <!-- Preconnect -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<template id="__bundler_thumbnail" data-bg-color="#0E0D0B">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0E0D0B"/>
+    <text x="600" y="470" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-size="340" fill="#F2EDE2" text-anchor="middle">JF<tspan fill="#D7421C">.</tspan></text>
+  </svg>
+</template>
+<style>
+:root{
+  --bone:#F2EDE2;
+  --bone-2:#EBE5D6;
+  --ink:#0E0D0B;
+  --ink-2:#1B1915;
+  --mute:#76705F;
+  --line:#1B1915;
+  --accent:#D7421C;        /* terracota */
+  --accent-2:#F26E2A;      /* warm orange */
+  --good:#1F5D3A;
+  --serif:"Instrument Serif", "Times New Roman", serif;
+  --sans:"Geist", system-ui, sans-serif;
+  --mono:"Geist Mono", ui-monospace, monospace;
+  --pad: clamp(20px, 4vw, 56px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bone);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;font-weight:400;font-size:16px;line-height:1.4;overflow-x:hidden}
+body{cursor:none}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--accent);color:var(--bone)}
 
-    <!-- Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-        rel="stylesheet">
+/* ====== Custom cursor ====== */
+.cursor{position:fixed;top:0;left:0;width:10px;height:10px;border-radius:50%;background:var(--ink);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s ease, height .2s ease, background .2s ease, opacity .2s ease;mix-blend-mode:difference}
+.cursor.lg{width:64px;height:64px;background:var(--accent)}
+.cursor-ring{position:fixed;top:0;left:0;width:36px;height:36px;border:1px solid var(--ink);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:transform .35s cubic-bezier(.2,.8,.2,1), opacity .2s, border-color .2s}
+.cursor-ring.lg{opacity:0}
+@media (hover:none){body{cursor:auto}.cursor,.cursor-ring{display:none}}
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+/* ====== Loader curtain ====== */
+.curtain{position:fixed;inset:0;background:var(--ink);color:var(--bone);z-index:10000;display:flex;align-items:center;justify-content:center;padding:var(--pad)}
+.curtain__inner{width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px}
+.curtain__brand{font-family:var(--serif);font-style:italic;font-size:clamp(48px,8vw,120px);letter-spacing:-.02em;line-height:.9}
+.curtain__brand span{display:inline-block;opacity:0;transform:translateY(110%);animation:rise .9s cubic-bezier(.2,.8,.2,1) forwards}
+.curtain__brand span:nth-child(2){animation-delay:.1s}
+.curtain__brand span:nth-child(3){animation-delay:.2s}
+.curtain__meta{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.curtain__meta--r{text-align:right}
+.curtain__bar{position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--bone);transform-origin:left;animation:fill 1.6s cubic-bezier(.7,0,.3,1) forwards}
+.curtain.done{transform:translateY(-100%);transition:transform 1s cubic-bezier(.7,0,.3,1) .2s}
+@keyframes rise{to{opacity:1;transform:translateY(0)}}
+@keyframes fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
-    <!-- Schema.org Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "JF Digital Studio",
-      "description": "Marketing y sistemas diseñados para negocios reales",
-      "url": "https://jf-digitalstudio.com",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Córdoba",
-        "addressCountry": "AR"
-      },
-      "sameAs": [
-        "https://instagram.com/jf.digitalstudio",
-        "https://linkedin.com/company/jfdigitalstudio"
-      ]
-    }
-    </script>
+/* ====== Page chrome ====== */
+.frame{position:fixed;inset:0;border:1px solid var(--ink);margin:14px;pointer-events:none;z-index:50;mix-blend-mode:multiply}
+.frame::before,.frame::after{content:"";position:absolute;background:var(--ink)}
+.frame::before{left:50%;top:-1px;bottom:-1px;width:1px;opacity:0}
+
+nav.top{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:24px var(--pad);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;mix-blend-mode:difference;color:var(--bone)}
+nav.top .brand{display:flex;align-items:center;gap:10px;font-weight:500}
+nav.top .brand i{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.4);opacity:.6}}
+nav.top ul{display:flex;gap:28px;list-style:none}
+nav.top ul a{position:relative;padding:6px 0}
+nav.top ul a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:1px;background:currentColor;transition:right .35s ease}
+nav.top ul a:hover::after{right:0}
+nav.top .cta{border:1px solid currentColor;padding:8px 14px;border-radius:99px;transition:background .25s, color .25s}
+nav.top .cta:hover{background:var(--bone);color:var(--ink)}
+
+/* ====== Generic layout ====== */
+.section{position:relative;padding:120px var(--pad);border-bottom:1px solid rgba(14,13,11,.12)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mute);display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:24px;height:1px;background:var(--ink)}
+.h-display{font-family:var(--serif);font-weight:400;letter-spacing:-.02em;line-height:.95}
+.h-display i{font-style:italic;color:var(--accent)}
+.body-l{font-size:clamp(18px,1.4vw,22px);line-height:1.5;color:var(--ink-2);max-width:55ch}
+.fineprint{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+
+/* word reveal */
+.reveal .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.reveal .w > span{display:inline-block;transform:translateY(105%);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.reveal.in .w > span{transform:translateY(0)}
+.reveal .w:nth-child(2n) > span{transition-delay:.04s}
+.reveal .w:nth-child(3n) > span{transition-delay:.08s}
+.reveal .w:nth-child(4n) > span{transition-delay:.12s}
+.reveal .w:nth-child(5n) > span{transition-delay:.16s}
+.reveal .w:nth-child(6n) > span{transition-delay:.2s}
+.reveal .w:nth-child(7n) > span{transition-delay:.24s}
+.fade-up{opacity:0;transform:translateY(28px);transition:opacity .9s ease, transform .9s cubic-bezier(.2,.8,.2,1)}
+.fade-up.in{opacity:1;transform:none}
+
+/* ====== HERO ====== */
+.hero{min-height:100vh;padding-top:140px;padding-bottom:60px;display:flex;flex-direction:column;justify-content:space-between;position:relative;border-bottom:1px solid var(--ink)}
+.hero__grid{display:grid;grid-template-columns:1.5fr 1fr;gap:60px;align-items:end}
+.hero h1{font-size:clamp(64px, 10.5vw, 180px);max-width:14ch}
+.hero h1 .mark{position:relative;display:inline-block}
+.hero h1 .mark::after{content:"";position:absolute;left:-.05em;right:-.05em;bottom:.08em;height:.12em;background:var(--accent);opacity:.92;z-index:-1;transform-origin:left;transform:scaleX(0);animation:hl 1s cubic-bezier(.2,.8,.2,1) 1.3s forwards}
+@keyframes hl{to{transform:scaleX(1)}}
+.hero__right{display:flex;flex-direction:column;gap:24px;justify-content:flex-end;padding-bottom:8px}
+.hero__right p{font-size:18px;line-height:1.45;color:var(--ink-2);max-width:34ch}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:99px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);transition:background .3s, color .3s;cursor:none}
+.btn.primary{background:var(--ink);color:var(--bone)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--bone)}
+.btn:hover{background:var(--ink);color:var(--bone)}
+.btn .arr{display:inline-block;width:14px;height:1px;background:currentColor;position:relative;transition:transform .3s}
+.btn .arr::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+.btn:hover .arr{transform:translateX(4px)}
+
+.hero__bottom{display:grid;grid-template-columns:repeat(4, 1fr);gap:24px;padding-top:60px;border-top:1px solid rgba(14,13,11,.2)}
+.hero__bottom .cell{display:flex;flex-direction:column;gap:8px}
+.hero__bottom .num{font-family:var(--serif);font-style:italic;font-size:42px;line-height:1;color:var(--accent)}
+.hero__bottom .lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.hero__bottom .desc{font-size:14px;line-height:1.4;color:var(--ink-2);max-width:24ch}
+
+.hero__status{position:absolute;top:90px;right:var(--pad);font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px;color:var(--ink-2)}
+.hero__status i{width:6px;height:6px;border-radius:50%;background:var(--good);box-shadow:0 0 0 3px rgba(31,93,58,.18);animation:pulse 2s infinite}
+
+/* scroll indicator */
+.scroll-ind{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);font-family:var(--mono);font-size:10px;letter-spacing:.2em;color:var(--mute);text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-ind .line{width:1px;height:32px;background:var(--ink);transform-origin:top;animation:drop 2.4s cubic-bezier(.7,0,.3,1) infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}50.01%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* ====== Marquee ====== */
+.marquee{padding:18px 0;border-bottom:1px solid var(--ink);background:var(--bone-2);overflow:hidden;white-space:nowrap}
+.marquee__track{display:inline-flex;gap:48px;animation:scroll 38s linear infinite;font-family:var(--serif);font-style:italic;font-size:46px;color:var(--ink)}
+.marquee__track span{display:inline-flex;align-items:center;gap:48px}
+.marquee__track span::after{content:"✦";color:var(--accent);font-style:normal}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ====== El problema ====== */
+.problema{padding-top:160px;padding-bottom:160px}
+.problema__grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start}
+.problema__copy h2{font-size:clamp(40px,5.4vw,82px);max-width:14ch}
+.problema__copy p{margin-top:32px;font-size:20px;line-height:1.5;color:var(--ink-2);max-width:46ch}
+.problema__side{position:sticky;top:120px;display:flex;flex-direction:column;gap:22px}
+.problema__bullet{display:flex;gap:18px;padding:18px 0;border-top:1px solid rgba(14,13,11,.16)}
+.problema__bullet:last-child{border-bottom:1px solid rgba(14,13,11,.16)}
+.problema__bullet .n{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--mute);min-width:28px}
+.problema__bullet .t{font-family:var(--serif);font-size:22px;line-height:1.3}
+
+/* ====== Dos perfiles ====== */
+.perfiles{padding:160px var(--pad);background:var(--ink);color:var(--bone)}
+.perfiles .eyebrow{color:var(--bone)}
+.perfiles .eyebrow::before{background:var(--bone)}
+.perfiles h2{font-family:var(--serif);font-size:clamp(48px,6.4vw,104px);line-height:.95;max-width:14ch;margin-bottom:80px}
+.perfiles h2 i{font-style:italic;color:var(--accent-2)}
+.perfiles__grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(242,237,226,.16)}
+.perfil{background:var(--ink);padding:48px 40px;display:flex;flex-direction:column;gap:24px;position:relative;transition:background .4s}
+.perfil:hover{background:var(--ink-2)}
+.perfil__head{display:flex;justify-content:space-between;align-items:start;gap:24px}
+.perfil__name{font-family:var(--serif);font-style:italic;font-size:42px;color:var(--accent-2)}
+.perfil__tag{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;padding:6px 10px;border:1px solid rgba(242,237,226,.4);border-radius:99px}
+.perfil h3{font-family:var(--serif);font-size:44px;line-height:1.05;max-width:11ch;margin-top:8px}
+.perfil p{color:rgba(242,237,226,.7);max-width:38ch;font-size:15px;line-height:1.5}
+.perfil ul{list-style:none;margin-top:auto;padding-top:32px;border-top:1px solid rgba(242,237,226,.2);display:flex;flex-direction:column;gap:14px}
+.perfil li{display:flex;align-items:center;gap:14px;font-size:15px;font-family:var(--mono);letter-spacing:.02em}
+.perfil li::before{content:"";width:18px;height:1px;background:var(--accent-2);flex:0 0 18px}
+.perfil__num{position:absolute;top:40px;right:40px;font-family:var(--mono);font-size:11px;color:rgba(242,237,226,.5);letter-spacing:.16em}
+
+/* ====== Proceso (scroll timeline) ====== */
+.proceso{padding:160px 0 0;border-bottom:1px solid var(--ink)}
+.proceso__head{padding:0 var(--pad);max-width:1400px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:60px;align-items:end;margin-bottom:80px}
+.proceso__head h2{font-size:clamp(48px,6.4vw,108px);font-family:var(--serif);line-height:.95}
+.proceso__head h2 i{font-style:italic;color:var(--accent)}
+.proceso__head p{font-size:17px;color:var(--ink-2);max-width:42ch}
+.proceso__rail{padding:0 var(--pad) 120px;position:relative;max-width:1400px;margin:0 auto}
+.proceso__progress{position:absolute;left:var(--pad);right:var(--pad);top:0;height:1px;background:rgba(14,13,11,.16)}
+.proceso__progress i{position:absolute;left:0;top:0;height:100%;background:var(--accent);width:0%;transition:width .3s linear}
+.proceso__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-top:32px}
+.step{display:flex;flex-direction:column;gap:18px;position:relative;padding-top:24px;border-top:1px solid transparent;transition:border-color .4s, opacity .4s;opacity:.4}
+.step.active{opacity:1;border-top-color:var(--ink)}
+.step__num{font-family:var(--serif);font-style:italic;font-size:72px;line-height:1;color:var(--ink)}
+.step.active .step__num{color:var(--accent)}
+.step h3{font-family:var(--serif);font-size:28px;line-height:1.1}
+.step p{font-size:14px;line-height:1.5;color:var(--ink-2);max-width:32ch}
+.step__icon{position:absolute;top:24px;right:0;width:32px;height:32px;border:1px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px}
+
+/* ====== PROYECTOS ====== */
+.proyectos{padding:160px 0 80px;background:var(--bone);border-bottom:1px solid var(--ink);position:relative;overflow:hidden}
+.proyectos__head{padding:0 var(--pad);display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:end;margin-bottom:80px;max-width:1600px;margin-left:auto;margin-right:auto}
+.proyectos__head h2{font-family:var(--serif);font-size:clamp(56px,7vw,128px);line-height:.92}
+.proyectos__head h2 i{font-style:italic;color:var(--accent)}
+.proyectos__head p{font-size:18px;color:var(--ink-2);max-width:42ch}
+.proyectos__count{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase;align-self:start;padding-top:8px;border-top:1px solid var(--ink);width:fit-content}
+
+.proj-stack{display:flex;flex-direction:column;gap:0}
+.proj{position:relative;border-top:1px solid var(--ink);padding:60px var(--pad) 80px;cursor:none;transition:background .4s}
+.proj:hover{background:var(--bone-2)}
+.proj:last-child{border-bottom:1px solid var(--ink)}
+.proj__grid{display:grid;grid-template-columns:1fr 1.6fr;gap:60px;max-width:1600px;margin:0 auto;align-items:start}
+.proj__meta{display:flex;flex-direction:column;gap:24px;position:sticky;top:120px}
+.proj__index{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--mute);text-transform:uppercase;display:flex;justify-content:space-between;border-bottom:1px solid var(--ink);padding-bottom:12px}
+.proj__name{font-family:var(--serif);font-size:clamp(48px,5vw,80px);line-height:.95}
+.proj__name i{font-style:italic;color:var(--accent)}
+.proj__tagline{font-size:17px;line-height:1.45;color:var(--ink-2);max-width:36ch}
+.proj__tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.proj__tag{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border:1px solid var(--ink);border-radius:99px}
+.proj__link{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:inline-flex;align-items:center;gap:10px;margin-top:12px;padding:10px 0;border-top:1px solid var(--ink);width:fit-content}
+.proj__link::after{content:"↗"}
+
+.proj__carousel{position:relative;overflow:hidden;height:560px;border-radius:8px}
+.proj__slides{display:flex;height:100%;transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.proj__slide{flex:0 0 100%;height:100%;position:relative;overflow:hidden}
+.proj__ctrls{display:flex;justify-content:space-between;align-items:center;margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.proj__dots{display:flex;gap:6px}
+.proj__dot{width:24px;height:2px;background:rgba(14,13,11,.2);border:none;padding:0;cursor:none;transition:background .3s}
+.proj__dot.active{background:var(--ink)}
+.proj__arrows{display:flex;gap:8px}
+.proj__arrow{width:36px;height:36px;border:1px solid var(--ink);border-radius:50%;background:transparent;cursor:none;display:flex;align-items:center;justify-content:center;transition:background .25s, color .25s}
+.proj__arrow:hover{background:var(--ink);color:var(--bone)}
+
+/* ----- Project mock chrome ----- */
+.mock{width:100%;height:100%;position:relative;display:flex;align-items:center;justify-content:center;padding:36px}
+.mock__chrome{position:absolute;top:14px;left:14px;display:flex;gap:6px;z-index:2}
+.mock__chrome i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.25)}
+.mock__url{position:absolute;top:14px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:11px;letter-spacing:.04em;background:rgba(255,255,255,.12);padding:4px 12px;border-radius:99px;color:rgba(255,255,255,.7)}
+
+/* PetApp mock palette */
+.mock--pet{background:linear-gradient(160deg, #F8E8D5 0%, #F0C8A0 70%, #E89968 100%)}
+.mock--pet .mock__url{background:rgba(0,0,0,.06);color:rgba(0,0,0,.5)}
+.mock--pet .mock__chrome i{background:rgba(0,0,0,.18)}
+.pet-app{width:280px;background:#FFFDF8;border-radius:32px;padding:18px;box-shadow:0 30px 60px -20px rgba(120,60,20,.4), 0 8px 20px -10px rgba(120,60,20,.3);font-family:var(--sans)}
+.pet-app__top{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#3A2C20;padding:2px 6px 14px}
+.pet-app__hi{font-family:var(--serif);font-size:24px;line-height:1.1;color:#2B1E14;padding:0 6px 12px}
+.pet-app__hi i{font-style:italic;color:#C24A1E}
+.pet-card{background:linear-gradient(135deg, #FFE0BA, #FFC890);border-radius:20px;padding:14px;color:#2B1E14;display:flex;gap:12px;align-items:center;margin-bottom:8px}
+.pet-card__av{width:42px;height:42px;border-radius:50%;background:#FFFDF8;display:flex;align-items:center;justify-content:center;font-size:22px}
+.pet-card__body{flex:1;display:flex;flex-direction:column;gap:2px}
+.pet-card__name{font-weight:600;font-size:13px}
+.pet-card__sub{font-size:10px;opacity:.65}
+.pet-card__btn{background:#2B1E14;color:#FFE0BA;border-radius:99px;padding:5px 10px;font-size:9px;letter-spacing:.06em;text-transform:uppercase}
+.pet-row{display:flex;gap:8px;padding:8px 6px;border-radius:12px;align-items:center}
+.pet-row + .pet-row{border-top:1px solid rgba(43,30,20,.08)}
+.pet-row__ic{width:28px;height:28px;border-radius:8px;background:#F5DCC0;display:flex;align-items:center;justify-content:center;font-size:14px}
+.pet-row__t{flex:1;font-size:11px;color:#2B1E14}
+.pet-row__t b{display:block;font-weight:600;font-size:12px}
+.pet-row__time{font-size:10px;color:#8A6A4A;font-family:var(--mono)}
+.pet-nav{display:flex;justify-content:space-around;padding-top:10px;border-top:1px solid rgba(43,30,20,.08);margin-top:6px;color:#8A6A4A;font-size:13px}
+.pet-nav i{display:inline-block;font-style:normal}
+.pet-nav i.on{color:#C24A1E}
+
+/* PetApp alt screen — map */
+.mock--pet-map{background:#F8E8D5}
+.pet-map{width:300px;height:480px;background:#F0E0C8;border-radius:32px;position:relative;overflow:hidden;box-shadow:0 30px 60px -20px rgba(120,60,20,.4)}
+.pet-map__bg{position:absolute;inset:0;background:
+  radial-gradient(circle at 30% 30%, rgba(232,153,104,.35) 0 80px, transparent 81px),
+  radial-gradient(circle at 70% 60%, rgba(232,153,104,.25) 0 60px, transparent 61px),
+  linear-gradient(120deg, transparent 49%, rgba(43,30,20,.08) 50%, transparent 51%),
+  linear-gradient(60deg, transparent 49%, rgba(43,30,20,.06) 50%, transparent 51%),
+  #F4E4CC}
+.pet-pin{position:absolute;width:36px;height:36px;border-radius:50% 50% 50% 0;background:#C24A1E;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;color:#FFE0BA;font-size:14px;box-shadow:0 6px 12px rgba(0,0,0,.2)}
+.pet-pin i{transform:rotate(45deg);font-style:normal}
+.pet-pin.p1{top:25%;left:25%}
+.pet-pin.p2{top:46%;left:60%}
+.pet-pin.p3{top:62%;left:30%}
+.pet-search{position:absolute;top:16px;left:16px;right:16px;background:#FFFDF8;border-radius:99px;padding:12px 16px;font-size:12px;color:#2B1E14;font-family:var(--sans);display:flex;align-items:center;gap:10px;box-shadow:0 6px 12px rgba(0,0,0,.08)}
+.pet-search::before{content:"⌕";color:#C24A1E;font-size:16px}
+.pet-sheet{position:absolute;left:12px;right:12px;bottom:12px;background:#FFFDF8;border-radius:20px;padding:14px;box-shadow:0 -6px 16px rgba(0,0,0,.06)}
+.pet-sheet__handle{width:36px;height:3px;border-radius:99px;background:#D9C5A8;margin:0 auto 10px}
+.pet-sheet h4{font-family:var(--serif);font-size:18px;color:#2B1E14;line-height:1.1}
+.pet-sheet h4 i{font-style:italic;color:#C24A1E}
+.pet-sheet p{font-size:11px;color:#8A6A4A;margin-top:4px}
+.pet-sheet__cta{margin-top:10px;background:#C24A1E;color:#FFE0BA;border-radius:99px;padding:8px;font-size:11px;text-align:center;letter-spacing:.04em}
+
+/* PetApp screen — detail */
+.mock--pet-detail{background:linear-gradient(160deg, #FFE7CC, #F4C394)}
+.pet-detail{width:280px;background:#FFFDF8;border-radius:32px;overflow:hidden;box-shadow:0 30px 60px -20px rgba(120,60,20,.4)}
+.pet-detail__hero{height:160px;background:linear-gradient(135deg,#C24A1E,#F26E2A);display:flex;align-items:flex-end;padding:16px;position:relative}
+.pet-detail__hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 30%, rgba(255,255,255,.2), transparent 50%)}
+.pet-detail__hero-paws{position:absolute;top:14px;right:14px;font-size:34px;opacity:.4}
+.pet-detail__hero h4{font-family:var(--serif);color:#FFFDF8;font-size:26px;line-height:1;position:relative;z-index:1}
+.pet-detail__hero h4 i{font-style:italic;display:block;font-size:30px}
+.pet-detail__body{padding:16px}
+.pet-detail__row{display:flex;justify-content:space-between;font-size:11px;color:#2B1E14;padding:8px 0;border-bottom:1px solid rgba(43,30,20,.08)}
+.pet-detail__row b{font-family:var(--serif);font-size:14px;color:#2B1E14}
+.pet-detail__row span{font-family:var(--mono);font-size:10px;color:#8A6A4A}
+.pet-detail__cta{margin-top:14px;background:#2B1E14;color:#FFE0BA;padding:12px;border-radius:99px;text-align:center;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--mono)}
+
+/* GlowUp mock palette */
+.mock--glow{background:linear-gradient(160deg, #FFD2E6 0%, #FF94C8 50%, #FF2E8E 100%)}
+.mock--glow .mock__url{background:rgba(0,0,0,.18);color:rgba(255,255,255,.85)}
+.mock--glow .mock__chrome i{background:rgba(255,255,255,.4)}
+.glow-app{width:280px;background:#0F0915;color:#FFE6F2;border-radius:32px;padding:18px;box-shadow:0 30px 60px -20px rgba(255,46,142,.5);font-family:var(--sans)}
+.glow-app__top{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:rgba(255,255,255,.6);padding:2px 6px 10px;font-family:var(--mono)}
+.glow-app__hi{font-family:var(--serif);font-size:24px;line-height:1.1;padding:6px 6px 14px}
+.glow-app__hi i{font-style:italic;color:#FF2E8E;display:block}
+.glow-card{background:linear-gradient(135deg, #FF2E8E, #FF5BA8);border-radius:20px;padding:14px;color:#FFFDF8;display:flex;gap:10px;align-items:center;margin-bottom:8px;position:relative;overflow:hidden}
+.glow-card::after{content:"✦";position:absolute;right:-6px;top:-6px;font-size:48px;opacity:.15}
+.glow-card__av{width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;color:#FFFDF8}
+.glow-card__body{flex:1}
+.glow-card__name{font-weight:600;font-size:13px}
+.glow-card__sub{font-size:10px;opacity:.8}
+.glow-card__badge{font-family:var(--mono);font-size:9px;background:rgba(0,0,0,.25);padding:3px 7px;border-radius:99px;letter-spacing:.06em}
+.glow-row{display:flex;gap:10px;padding:10px 6px;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
+.glow-row__av{width:32px;height:32px;border-radius:50%;background:rgba(255,46,142,.2);color:#FF2E8E;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:16px}
+.glow-row__t{flex:1;font-size:11px}
+.glow-row__t b{display:block;font-weight:600;font-size:12px;color:#FFFDF8}
+.glow-row__t span{opacity:.6}
+.glow-row__time{font-family:var(--mono);font-size:10px;color:#FF94C8}
+
+/* GlowUp alt — agenda */
+.mock--glow-agenda{background:linear-gradient(160deg,#1A0E18 0%, #2A0B1F 50%, #0F0915 100%)}
+.glow-agenda{width:300px;background:#0F0915;border-radius:32px;padding:18px;color:#FFE6F2;font-family:var(--sans);box-shadow:0 30px 60px -20px rgba(255,46,142,.5)}
+.glow-agenda__head{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.12)}
+.glow-agenda__head h4{font-family:var(--serif);font-size:22px;line-height:1}
+.glow-agenda__head h4 i{font-style:italic;color:#FF2E8E}
+.glow-agenda__pill{background:#FF2E8E;color:#0F0915;font-family:var(--mono);font-size:9px;padding:4px 8px;border-radius:99px;letter-spacing:.08em}
+.glow-week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.glow-week__d{aspect-ratio:1/1.1;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.5);border-radius:8px}
+.glow-week__d b{font-family:var(--serif);font-size:14px;color:#FFE6F2;font-weight:400}
+.glow-week__d.active{background:#FF2E8E;color:#0F0915}
+.glow-week__d.active b{color:#0F0915}
+.glow-slot{display:grid;grid-template-columns:38px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);align-items:center}
+.glow-slot__time{font-family:var(--mono);font-size:11px;color:#FF94C8}
+.glow-slot__b{font-size:11px;line-height:1.3}
+.glow-slot__b b{display:block;font-weight:600;font-size:12px;color:#FFFDF8;font-family:var(--sans)}
+.glow-slot__b span{color:rgba(255,255,255,.5)}
+.glow-total{display:flex;justify-content:space-between;align-items:center;padding-top:12px;margin-top:6px;border-top:1px solid rgba(255,255,255,.12)}
+.glow-total span{font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.5);letter-spacing:.1em;text-transform:uppercase}
+.glow-total b{font-family:var(--serif);font-style:italic;font-size:22px;color:#FF2E8E;font-weight:400}
+
+/* GlowUp screen — explore */
+.mock--glow-explore{background:linear-gradient(160deg, #FF94C8, #FF2E8E)}
+.glow-explore{width:280px;background:#FFFDF8;color:#1A0E18;border-radius:32px;padding:16px;box-shadow:0 30px 60px -20px rgba(255,46,142,.5);font-family:var(--sans)}
+.glow-explore__search{background:#F5EFEC;border-radius:99px;padding:10px 14px;font-size:12px;color:#76705F;display:flex;gap:8px;align-items:center}
+.glow-explore__search::before{content:"⌕";color:#FF2E8E;font-size:16px}
+.glow-explore__chips{display:flex;gap:6px;margin-top:12px;overflow:hidden}
+.glow-chip{font-family:var(--mono);font-size:10px;padding:6px 10px;border-radius:99px;border:1px solid rgba(0,0,0,.12);letter-spacing:.04em}
+.glow-chip.on{background:#FF2E8E;color:#FFFDF8;border-color:#FF2E8E}
+.glow-explore h5{font-family:var(--serif);font-size:18px;margin-top:14px;line-height:1.1}
+.glow-explore h5 i{font-style:italic;color:#FF2E8E}
+.glow-tile{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.glow-tile__c{height:80px;border-radius:14px;display:flex;flex-direction:column;justify-content:space-between;padding:10px;font-size:10px;position:relative;overflow:hidden}
+.glow-tile__c b{font-family:var(--serif);font-size:14px;line-height:1.1}
+.glow-tile__c span{font-family:var(--mono);font-size:9px;color:rgba(0,0,0,.5)}
+.glow-tile__c.t1{background:linear-gradient(135deg,#FFD2E6,#FF94C8);color:#1A0E18}
+.glow-tile__c.t2{background:linear-gradient(135deg,#FFE2C7,#FFB07A);color:#3A2C20}
+.glow-tile__c.t3{background:linear-gradient(135deg,#C7D8FF,#7AA4FF);color:#1A1F30}
+.glow-tile__c.t4{background:linear-gradient(135deg,#1A0E18,#3A1A2E);color:#FFE6F2}
+.glow-tile__c.t4 span{color:rgba(255,255,255,.5)}
+
+/* Agamotto mock palette */
+.mock--ag{background:#0A0A0A;background:radial-gradient(circle at 30% 20%, #1A1A1F 0%, #0A0A0A 60%);font-family:var(--mono)}
+.mock--ag .mock__url{background:rgba(255,255,255,.06);color:#9AA0B2;font-family:var(--mono)}
+.mock--ag .mock__chrome i{background:rgba(255,255,255,.18)}
+.mock--ag::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);background-size:24px 24px;pointer-events:none}
+.ag-app{width:520px;background:#0E0E12;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px;color:#E6E6EC;font-family:var(--mono);font-size:11px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);position:relative;z-index:2}
+.ag-app__top{display:flex;justify-content:space-between;align-items:center;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0B2}
+.ag-app__top b{color:#E6E6EC;font-weight:500}
+.ag-app__top i{color:#41C384;font-style:normal}
+.ag-h{padding:14px 0 6px;display:flex;justify-content:space-between;align-items:baseline}
+.ag-h h4{font-family:var(--serif);font-size:18px;font-weight:400;color:#E6E6EC}
+.ag-h span{color:#9AA0B2;font-size:10px}
+.ag-table{width:100%;font-size:11px;border-collapse:collapse;margin-top:8px}
+.ag-table th{text-align:left;font-weight:400;color:#76798A;padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.08);letter-spacing:.08em;font-size:9px;text-transform:uppercase}
+.ag-table td{padding:8px;border-bottom:1px solid rgba(255,255,255,.04);color:#C8CAD2}
+.ag-table tr:hover td{background:rgba(255,255,255,.03);color:#fff}
+.ag-table .flag{display:inline-block;width:18px;margin-right:8px;text-align:center}
+.ag-table .pct{color:#41C384}
+.ag-table .pct.med{color:#E8B85A}
+.ag-table .pct.lo{color:#9AA0B2}
+.ag-table .bar{display:inline-block;width:48px;height:4px;background:rgba(255,255,255,.08);border-radius:99px;vertical-align:middle;margin-left:8px;overflow:hidden;position:relative}
+.ag-table .bar i{display:block;height:100%;background:#41C384}
+
+/* Agamotto alt — matches */
+.mock--ag-match{background:#0A0A0A;background:radial-gradient(circle at 70% 30%, #15151B 0%, #0A0A0A 60%)}
+.ag-matches{width:520px;background:#0E0E12;border:1px solid rgba(255,255,255,.08);border-radius:12px;color:#E6E6EC;font-family:var(--mono);font-size:11px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);overflow:hidden;position:relative;z-index:2}
+.ag-matches__top{padding:14px 18px;border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0B2}
+.ag-match{padding:18px;border-bottom:1px solid rgba(255,255,255,.06)}
+.ag-match__meta{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0B2;display:flex;justify-content:space-between;margin-bottom:10px}
+.ag-match__teams{display:grid;grid-template-columns:1fr auto 1fr;gap:12px;align-items:center;font-family:var(--serif);font-size:20px;color:#E6E6EC}
+.ag-match__teams .l{text-align:left}.ag-match__teams .r{text-align:right}
+.ag-match__teams .vs{color:#76798A;font-size:11px;font-family:var(--mono)}
+.ag-match__teams .flag{font-size:18px;margin-right:8px}
+.ag-match__prob{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:14px;align-items:end}
+.ag-match__prob-col{display:flex;flex-direction:column;align-items:center;gap:4px;font-size:9px;color:#9AA0B2;letter-spacing:.1em;text-transform:uppercase}
+.ag-match__prob-col b{font-family:var(--serif);font-size:22px;color:#E6E6EC;font-weight:400;line-height:1}
+.ag-match__prob-col.win b{color:#41C384}
+.ag-match__bar{margin-top:14px;height:6px;border-radius:99px;background:#9AA0B2;display:flex;overflow:hidden}
+.ag-match__bar .w{background:#41C384}
+.ag-match__bar .d{background:#76798A}
+.ag-match__bar .l{background:#D7421C}
+.ag-match__stats{display:flex;justify-content:space-between;margin-top:14px;font-size:10px;color:#9AA0B2;padding-top:10px;border-top:1px dashed rgba(255,255,255,.1)}
+.ag-match__stats b{color:#E6E6EC;font-family:var(--serif);font-size:14px;font-weight:400;display:block}
+
+/* Agamotto screen — bracket */
+.mock--ag-bracket{background:#0A0A0A}
+.ag-bracket{width:520px;background:#0E0E12;border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:18px;color:#E6E6EC;font-family:var(--mono);font-size:11px;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);position:relative;z-index:2}
+.ag-bracket__top{display:flex;justify-content:space-between;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.08);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9AA0B2}
+.ag-bracket__top h4{font-family:var(--serif);font-size:16px;color:#E6E6EC;text-transform:none;letter-spacing:0;font-weight:400}
+.ag-bracket__viz{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:18px 0;align-items:center}
+.ag-pair{display:flex;flex-direction:column;gap:4px}
+.ag-pair__t{display:flex;justify-content:space-between;padding:6px 8px;border:1px solid rgba(255,255,255,.1);border-radius:6px;font-size:10px}
+.ag-pair__t.win{background:rgba(65,195,132,.1);border-color:rgba(65,195,132,.3);color:#41C384}
+.ag-pair__t .pct{color:#9AA0B2;font-size:9px}
+.ag-final{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px;border:1px dashed rgba(255,255,255,.18);border-radius:8px}
+.ag-final span{font-size:9px;letter-spacing:.16em;color:#9AA0B2;text-transform:uppercase}
+.ag-final b{font-family:var(--serif);font-size:24px;color:#41C384;font-weight:400}
+.ag-final em{font-style:normal;font-family:var(--mono);font-size:11px;color:#9AA0B2}
+.ag-bracket__foot{padding-top:14px;margin-top:6px;border-top:1px dashed rgba(255,255,255,.1);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:#76798A;display:flex;justify-content:space-between}
+
+/* ====== Para quién ====== */
+.audience{padding:160px var(--pad);background:var(--bone-2)}
+.audience__head{display:flex;justify-content:space-between;align-items:end;margin-bottom:60px;gap:40px}
+.audience__head h2{font-family:var(--serif);font-size:clamp(48px,6vw,96px);line-height:.95;max-width:14ch}
+.audience__head h2 i{font-style:italic;color:var(--accent)}
+.audience__head p{max-width:32ch;font-size:16px;color:var(--ink-2)}
+.audience__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(14,13,11,.16);border:1px solid rgba(14,13,11,.16)}
+.aud-cell{background:var(--bone-2);padding:32px;display:flex;flex-direction:column;gap:14px;min-height:240px;transition:background .3s, color .3s;position:relative;overflow:hidden}
+.aud-cell:hover{background:var(--ink);color:var(--bone)}
+.aud-cell:hover .aud-cell__n{color:rgba(242,237,226,.5)}
+.aud-cell:hover .aud-cell__ic{color:var(--accent-2)}
+.aud-cell__n{font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mute);transition:color .3s}
+.aud-cell__ic{font-family:var(--serif);font-style:italic;font-size:42px;color:var(--accent);transition:color .3s;margin-top:auto;line-height:1}
+.aud-cell h3{font-family:var(--serif);font-size:24px;line-height:1.15}
+.aud-cell p{font-size:14px;line-height:1.45;color:inherit;opacity:.8;max-width:24ch}
+
+/* ====== Testimonios marquee ====== */
+.testimonios{padding:160px var(--pad) 100px}
+.testimonios__head{display:flex;justify-content:space-between;align-items:end;margin-bottom:80px}
+.testimonios__head h2{font-family:var(--serif);font-size:clamp(48px,6vw,96px);line-height:.95;max-width:12ch}
+.testimonios__head h2 i{font-style:italic;color:var(--accent)}
+.t-row{display:flex;gap:24px;animation:scroll 60s linear infinite;width:max-content;will-change:transform}
+.t-row.rev{animation-direction:reverse;animation-duration:80s;margin-top:24px}
+.t-card{flex:0 0 460px;background:var(--bone-2);padding:32px;border:1px solid rgba(14,13,11,.16);border-radius:4px;display:flex;flex-direction:column;gap:24px;min-height:280px}
+.t-card__quote{font-family:var(--serif);font-size:24px;line-height:1.25;flex:1}
+.t-card__quote::before{content:"“";font-size:60px;line-height:0;color:var(--accent);display:inline-block;margin-right:4px;vertical-align:-0.2em}
+.t-card__foot{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid rgba(14,13,11,.16)}
+.t-card__av{width:42px;height:42px;border-radius:50%;background:var(--ink);color:var(--bone);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:18px}
+.t-card__name b{display:block;font-size:14px;font-weight:500}
+.t-card__name span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* ====== FAQ ====== */
+.faq{padding:140px var(--pad);background:var(--ink);color:var(--bone)}
+.faq .eyebrow{color:var(--bone)}.faq .eyebrow::before{background:var(--bone)}
+.faq__grid{display:grid;grid-template-columns:1fr 2fr;gap:80px;margin-top:40px}
+.faq h2{font-family:var(--serif);font-size:clamp(48px,5vw,80px);line-height:.95;max-width:11ch}
+.faq h2 i{font-style:italic;color:var(--accent-2)}
+.faq__list{display:flex;flex-direction:column}
+.faq__item{border-top:1px solid rgba(242,237,226,.2);padding:24px 0;cursor:none;transition:padding .3s}
+.faq__item:last-child{border-bottom:1px solid rgba(242,237,226,.2)}
+.faq__q{display:flex;justify-content:space-between;align-items:center;font-family:var(--serif);font-size:26px;line-height:1.2;gap:24px}
+.faq__q .ic{width:36px;height:36px;border-radius:50%;border:1px solid var(--bone);display:flex;align-items:center;justify-content:center;flex:0 0 36px;transition:transform .4s, background .3s, color .3s;font-size:20px;font-family:var(--mono)}
+.faq__item.open .faq__q .ic{background:var(--accent-2);border-color:var(--accent-2);color:var(--ink);transform:rotate(45deg)}
+.faq__a{max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.2,.8,.2,1), margin .5s, opacity .4s;opacity:0}
+.faq__item.open .faq__a{max-height:300px;margin-top:18px;opacity:1}
+.faq__a p{color:rgba(242,237,226,.7);font-size:16px;line-height:1.55;max-width:60ch}
+
+/* ====== Contacto ====== */
+.contact{padding:160px var(--pad) 120px;position:relative}
+.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.contact h2{font-family:var(--serif);font-size:clamp(56px,7vw,140px);line-height:.92;max-width:11ch}
+.contact h2 i{font-style:italic;color:var(--accent)}
+.contact p.lead{margin-top:32px;font-size:18px;color:var(--ink-2);max-width:36ch;line-height:1.5}
+.contact__links{margin-top:48px;display:flex;flex-direction:column;gap:0}
+.contact__link{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-top:1px solid var(--ink);font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;transition:padding .3s}
+.contact__link:last-child{border-bottom:1px solid var(--ink)}
+.contact__link:hover{padding-left:14px}
+.contact__link b{font-family:var(--serif);font-style:italic;font-size:24px;text-transform:none;font-weight:400;letter-spacing:0}
+.contact__link span{display:flex;align-items:center;gap:14px;color:var(--mute)}
+.contact__link .arr{transition:transform .3s;display:inline-block}
+.contact__link:hover .arr{transform:translateX(6px) translateY(-6px)}
+
+.form{background:var(--ink);color:var(--bone);padding:48px;border-radius:8px;display:flex;flex-direction:column;gap:18px}
+.form h3{font-family:var(--serif);font-size:32px;line-height:1.1}
+.form h3 i{font-style:italic;color:var(--accent-2)}
+.form__row{display:flex;flex-direction:column;gap:6px}
+.form__row label{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(242,237,226,.6)}
+.form__row input,.form__row select,.form__row textarea{background:transparent;border:none;border-bottom:1px solid rgba(242,237,226,.2);padding:10px 0;color:var(--bone);font-family:var(--sans);font-size:16px;outline:none;transition:border-color .3s}
+.form__row input:focus,.form__row select:focus,.form__row textarea:focus{border-color:var(--accent-2)}
+.form__row textarea{resize:none;min-height:80px}
+.form__row select{appearance:none;-webkit-appearance:none}
+.form .btn{align-self:flex-start;margin-top:12px;background:var(--accent-2);border-color:var(--accent-2);color:var(--ink)}
+.form .btn:hover{background:var(--bone);border-color:var(--bone);color:var(--ink)}
+
+/* ====== Footer ====== */
+footer{padding:80px var(--pad) 40px;background:var(--bone)}
+.foot__top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;padding-bottom:60px;border-bottom:1px solid var(--ink)}
+.foot__brand{font-family:var(--serif);font-style:italic;font-size:80px;line-height:.9;color:var(--ink)}
+.foot__brand span{color:var(--accent)}
+.foot__brand + p{margin-top:16px;color:var(--ink-2);max-width:32ch;font-size:14px}
+.foot__col h4{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:18px}
+.foot__col ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-size:14px}
+.foot__col a{display:inline-flex;align-items:center;gap:8px;transition:color .25s}
+.foot__col a:hover{color:var(--accent)}
+.foot__bot{padding-top:32px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--mute);text-transform:uppercase}
+.foot__bot b{color:var(--ink);font-weight:500}
+
+/* GIANT footer wordmark */
+.foot__mark{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(120px, 22vw, 360px);line-height:.85;letter-spacing:-.03em;color:var(--ink);padding:60px 0 0;text-align:center;position:relative;overflow:hidden}
+.foot__mark span{display:inline-block;color:var(--accent)}
+
+/* ====== WhatsApp floating button ====== */
+.wa-float{position:fixed;right:clamp(18px,3vw,30px);bottom:clamp(18px,3vw,30px);z-index:120;width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--bone);display:flex;align-items:center;justify-content:center;box-shadow:0 14px 32px -8px rgba(215,66,28,.6);transition:transform .3s cubic-bezier(.2,.8,.2,1), background .3s;cursor:none}
+.wa-float:hover{transform:translateY(-3px) scale(1.06);background:var(--accent-2)}
+.wa-float svg{width:28px;height:28px;fill:currentColor;position:relative;z-index:1}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--accent);animation:waPulse 2.6s cubic-bezier(.2,.8,.2,1) infinite}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.6);opacity:0}}
+
+/* Mobile gate */
+@media (max-width: 900px){
+  body{cursor:auto}
+  .cursor,.cursor-ring{display:none}
+  .wa-float{cursor:pointer}
+  .hero__grid,.problema__grid,.perfiles__grid,.proceso__head,.proceso__steps,.proyectos__head,.audience__grid,.faq__grid,.contact__grid,.foot__top{grid-template-columns:1fr;gap:40px}
+  .hero__bottom{grid-template-columns:repeat(2,1fr);gap:32px}
+  .audience__grid{grid-template-columns:1fr 1fr}
+  .proj__grid{grid-template-columns:minmax(0,1fr);gap:40px}
+  .proj__grid > *{min-width:0}
+  .proj__meta{position:static}
+  .proj__carousel{height:420px}
+  .proj__carousel .mock{padding:16px}
+  .proj__carousel .mock > div{flex-shrink:0}
+  .proj__carousel .ag-app,.proj__carousel .ag-matches,.proj__carousel .ag-bracket{transform:scale(.6);transform-origin:center}
+  nav.top ul{display:none}
+}
+</style>
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "JF Digital Studio",
+  "description": "Marketing y sistemas diseñados para negocios reales",
+  "url": "https://jf-digitalstudio.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Córdoba",
+    "addressCountry": "AR"
+  },
+  "sameAs": [
+    "https://instagram.com/jf.digitalstudio",
+    "https://linkedin.com/company/jfdigitalstudio"
+  ]
+}
+</script>
 </head>
-
 <body>
 
-    <!-- ========== LOADING SCREEN ========== -->
-    <div class="loading-screen" id="loading-screen" role="status" aria-label="Cargando página">
-        <div class="loading-logo">JF</div>
-        <div class="loading-bar">
-            <div class="loading-bar-fill"></div>
+<!-- Custom cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- Loader curtain -->
+<div class="curtain" id="curtain">
+  <div class="curtain__inner">
+    <div class="curtain__meta">JF · Estudio digital<br/>Córdoba, AR</div>
+    <div class="curtain__brand"><span>J</span><span>F</span><span>.</span></div>
+    <div class="curtain__meta curtain__meta--r">v 2026 · Edición 03<br/>Cargando estructura</div>
+  </div>
+  <div class="curtain__bar"></div>
+</div>
+
+<!-- Nav -->
+<nav class="top">
+  <a class="brand" href="#"><i></i> JF Digital Studio</a>
+  <ul>
+    <li><a href="#problema">Problema</a></li>
+    <li><a href="#perfiles">Perfiles</a></li>
+    <li><a href="#proceso">Proceso</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#testimonios">Testimonios</a></li>
+  </ul>
+  <a class="cta" href="#contacto">Agendar →</a>
+</nav>
+
+<main>
+<!-- ============ HERO ============ -->
+<section class="hero section" style="border-bottom:1px solid var(--ink)" data-screen-label="01 Hero">
+  <div class="hero__status"><i></i> Aceptando 3 nuevos clientes · Q2 2026</div>
+
+  <div class="hero__grid">
+    <h1 class="h-display reveal" data-reveal>
+      Estructura
+      para negocios
+      <span class="mark">que</span> <i>crecen.</i>
+    </h1>
+    <div class="hero__right fade-up" data-delay="800">
+      <div class="eyebrow">Estudio · 2026</div>
+      <p>Ordenamos la comunicación y construimos sistemas a medida para que tu negocio escale con orden — no con caos.</p>
+      <div class="hero__cta">
+        <a class="btn primary" href="#contacto">Agendar reunión <span class="arr"></span></a>
+        <a class="btn" href="#proceso">Ver proceso</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__bottom">
+    <div class="cell">
+      <div class="num">01</div>
+      <div class="lbl">Enfoque</div>
+      <div class="desc">Cada negocio se analiza antes de tocar una línea de código.</div>
+    </div>
+    <div class="cell">
+      <div class="num">02</div>
+      <div class="lbl">A medida</div>
+      <div class="desc">Cero plantillas. Lo que sirve para vos, sirve solo para vos.</div>
+    </div>
+    <div class="cell">
+      <div class="num">03</div>
+      <div class="lbl">Integración</div>
+      <div class="desc">Estrategia y desarrollo trabajan en el mismo plano.</div>
+    </div>
+    <div class="cell">
+      <div class="num">04</div>
+      <div class="lbl">Acompañamiento</div>
+      <div class="desc">No solo entregamos. Implementamos y capacitamos.</div>
+    </div>
+  </div>
+
+  <div class="scroll-ind">Scroll <div class="line"></div></div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee">
+  <div class="marquee__track">
+    <span>Marketing</span><span>Sistemas</span><span>Identidad</span><span>Reservas</span><span>Automatización</span><span>Redes</span><span>Talleres</span><span>Marketing</span><span>Sistemas</span><span>Identidad</span><span>Reservas</span><span>Automatización</span><span>Redes</span><span>Talleres</span>
+  </div>
+</div>
+
+<!-- ============ PROBLEMA ============ -->
+<section class="problema section" id="problema" data-screen-label="02 Problema">
+  <div class="problema__grid">
+    <div class="problema__copy">
+      <div class="eyebrow">Contexto</div>
+      <h2 class="h-display reveal" data-reveal>Cuando el negocio crece, el <i>desorden</i> crece con él.</h2>
+      <p>El crecimiento es el objetivo, pero sin estructura te aplasta. Muchos negocios no fallan por falta de ventas — fallan por falta de orden interno. Construimos el puente entre donde estás hoy y la estructura que necesitás para escalar mañana.</p>
+    </div>
+    <div class="problema__side fade-up">
+      <div class="problema__bullet"><div class="n">01</div><div class="t">Turnos perdidos entre WhatsApp, Instagram y cuadernos.</div></div>
+      <div class="problema__bullet"><div class="n">02</div><div class="t">Equipos que repiten tareas porque nadie sabe quién hace qué.</div></div>
+      <div class="problema__bullet"><div class="n">03</div><div class="t">Una comunicación que cambia de tono según quién postea.</div></div>
+      <div class="problema__bullet"><div class="n">04</div><div class="t">Métricas que nadie mira porque no significan nada.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOS PERFILES ============ -->
+<section class="perfiles" id="perfiles" data-screen-label="03 Perfiles">
+  <div class="eyebrow">Lo que ofrecemos</div>
+  <h2 class="reveal" data-reveal>Dos perfiles, <i>un solo equipo.</i></h2>
+
+  <div class="perfiles__grid">
+    <div class="perfil">
+      <div class="perfil__num">/ 01</div>
+      <div class="perfil__head">
+        <div class="perfil__name">Franco</div>
+        <div class="perfil__tag">Tecnología</div>
+      </div>
+      <h3>Sistemas y desarrollo a medida.</h3>
+      <p>Escalar requiere precisión técnica. Construimos la columna vertebral digital de tu operación — turnos, stock, paneles, automatizaciones — todo lo que tu negocio necesita para funcionar sin fricción.</p>
+      <ul>
+        <li>Sistemas de reservas y turnos</li>
+        <li>Gestión de stock para talleres</li>
+        <li>Paneles internos a medida</li>
+        <li>Automatización de procesos</li>
+        <li>Desarrollo web full-stack</li>
+      </ul>
+    </div>
+    <div class="perfil">
+      <div class="perfil__num">/ 02</div>
+      <div class="perfil__head">
+        <div class="perfil__name">Julieta</div>
+        <div class="perfil__tag">Estrategia</div>
+      </div>
+      <h3>Comunicación con voz propia.</h3>
+      <p>Un buen producto necesita una voz clara. Definimos tu posición en el mercado, tu tono y cada pieza que sale al mundo en tu nombre — para que cuando alguien te encuentre, sepa exactamente quién sos.</p>
+      <ul>
+        <li>Gestión estratégica de redes</li>
+        <li>Planificación de contenido</li>
+        <li>Identidad y tono de marca</li>
+        <li>Campañas de marketing digital</li>
+        <li>Análisis de métricas reales</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="proceso" id="proceso" data-screen-label="04 Proceso">
+  <div class="proceso__head">
+    <h2 class="reveal" data-reveal>Así <i>trabajamos.</i></h2>
+    <p class="fade-up">Un proceso de cuatro pasos. Sin sorpresas, sin diluir el alcance, sin "ya lo terminamos" cuando todavía falta. Lo aplicamos a cada proyecto, desde una landing hasta un sistema completo.</p>
+  </div>
+  <div class="proceso__rail" id="proceso-rail">
+    <div class="proceso__progress"><i id="proceso-bar"></i></div>
+    <div class="proceso__steps">
+      <div class="step" data-step="0">
+        <div class="step__icon">⌕</div>
+        <div class="step__num">01</div>
+        <h3>Analizamos</h3>
+        <p>Auditamos los flujos actuales de tu negocio. Encontramos los puntos críticos y las oportunidades reales — no las que suenan bien en una propuesta.</p>
+      </div>
+      <div class="step" data-step="1">
+        <div class="step__icon">✎</div>
+        <div class="step__num">02</div>
+        <h3>Diseñamos</h3>
+        <p>Hoja de ruta estratégica y técnica, hecha solo para vos. Cada decisión está documentada: por qué se hace, qué resuelve, cuándo se entrega.</p>
+      </div>
+      <div class="step" data-step="2">
+        <div class="step__icon">{ }</div>
+        <div class="step__num">03</div>
+        <h3>Desarrollamos</h3>
+        <p>Construimos las herramientas y la comunicación en paralelo. Iteramos en sprints cortos, te mostramos avances cada semana.</p>
+      </div>
+      <div class="step" data-step="3">
+        <div class="step__icon">✓</div>
+        <div class="step__num">04</div>
+        <h3>Implementamos</h3>
+        <p>Lanzamos, capacitamos al equipo y nos quedamos cerca durante la transición. La adopción interna es parte del proyecto, no un favor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROYECTOS ============ -->
+<section class="proyectos" id="proyectos" data-screen-label="05 Proyectos">
+  <div class="proyectos__head">
+    <div>
+      <div class="eyebrow">Trabajos seleccionados</div>
+      <h2 class="reveal" data-reveal style="margin-top:24px">Proyectos <i>en producción.</i></h2>
+    </div>
+    <div>
+      <p class="fade-up">Tres productos reales construidos de cero. Cada uno con su sistema visual, su lógica y su público — todos con la misma obsesión por el orden interno.</p>
+      <div class="proyectos__count" style="margin-top:24px">03 / Casos · 2025—2026</div>
+    </div>
+  </div>
+
+  <div class="proj-stack">
+    <!-- PROJECT 1 — PETAPP -->
+    <article class="proj" id="proj-pet" data-screen-label="05a PetApp">
+      <div class="proj__grid">
+        <div class="proj__meta">
+          <div class="proj__index"><span>01 / 03</span><span>2026</span></div>
+          <div class="proj__name">Pet<i>App.</i></div>
+          <div class="proj__tags">
+            <div class="proj__tag">Marketplace</div>
+            <div class="proj__tag">Mascotas</div>
+            <div class="proj__tag">Reservas</div>
+            <div class="proj__tag">Mobile-first</div>
+          </div>
+          <p class="proj__tagline">Una red de lugares pet-friendly donde reservar veterinarias, paseos, peluquerías y estadías para mascotas. Tono cálido, geolocalización en tiempo real, perfiles de mascotas guardados.</p>
+          <a class="proj__link" href="https://pet-friendly.fun" target="_blank" rel="noopener">Ver en producción</a>
         </div>
+        <div>
+          <div class="proj__carousel" data-carousel>
+            <div class="proj__slides">
+              <!-- Slide 1: home / cards -->
+              <div class="proj__slide">
+                <div class="mock mock--pet">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">pet-friendly.fun</div>
+                  <div class="pet-app">
+                    <div class="pet-app__top"><span>9:41</span><span>● ● ●</span></div>
+                    <div class="pet-app__hi">Hola, Sofi.<br/><i>¿qué necesita</i> Luna hoy?</div>
+                    <div class="pet-card">
+                      <div class="pet-card__av">🐶</div>
+                      <div class="pet-card__body">
+                        <div class="pet-card__name">Luna · 3 años</div>
+                        <div class="pet-card__sub">Próximo turno · Mar 21</div>
+                      </div>
+                      <div class="pet-card__btn">Ver</div>
+                    </div>
+                    <div class="pet-row">
+                      <div class="pet-row__ic">🏥</div>
+                      <div class="pet-row__t"><b>Vet del Parque</b>Palermo · 0,4 km</div>
+                      <div class="pet-row__time">15:30</div>
+                    </div>
+                    <div class="pet-row">
+                      <div class="pet-row__ic">✂</div>
+                      <div class="pet-row__t"><b>Pelo y Pelitos</b>Villa Crespo · 0,9 km</div>
+                      <div class="pet-row__time">17:00</div>
+                    </div>
+                    <div class="pet-row">
+                      <div class="pet-row__ic">🦴</div>
+                      <div class="pet-row__t"><b>Paseo grupal AM</b>Caballito · 1,2 km</div>
+                      <div class="pet-row__time">08:00</div>
+                    </div>
+                    <div class="pet-nav"><i class="on">⌂</i><i>⌕</i><i>♥</i><i>◷</i><i>○</i></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: map -->
+              <div class="proj__slide">
+                <div class="mock mock--pet-map">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">pet-friendly.fun/explorar</div>
+                  <div class="pet-map">
+                    <div class="pet-map__bg"></div>
+                    <div class="pet-search">Cerca de Palermo · 14 lugares</div>
+                    <div class="pet-pin p1"><i>🐾</i></div>
+                    <div class="pet-pin p2"><i>🐾</i></div>
+                    <div class="pet-pin p3"><i>🐾</i></div>
+                    <div class="pet-sheet">
+                      <div class="pet-sheet__handle"></div>
+                      <h4>Vet <i>del Parque</i></h4>
+                      <p>Hoy abierto · 09:00 — 20:00 · 0,4 km · ★ 4.9</p>
+                      <div class="pet-sheet__cta">Reservar turno</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: profile detail -->
+              <div class="proj__slide">
+                <div class="mock mock--pet-detail">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">pet-friendly.fun/luna</div>
+                  <div class="pet-detail">
+                    <div class="pet-detail__hero">
+                      <div class="pet-detail__hero-paws">🐾</div>
+                      <h4><i>Luna</i>Caniche · 3 años</h4>
+                    </div>
+                    <div class="pet-detail__body">
+                      <div class="pet-detail__row"><b>Próximo turno</b><span>21 Mar · 15:30</span></div>
+                      <div class="pet-detail__row"><b>Última vacuna</b><span>Sept 2025</span></div>
+                      <div class="pet-detail__row"><b>Veterinario</b><span>Dr. Méndez</span></div>
+                      <div class="pet-detail__row"><b>Alergias</b><span>Ninguna</span></div>
+                      <div class="pet-detail__cta">Agendar control</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj__ctrls">
+            <div class="proj__dots">
+              <button class="proj__dot active" data-dot="0"></button>
+              <button class="proj__dot" data-dot="1"></button>
+              <button class="proj__dot" data-dot="2"></button>
+            </div>
+            <div style="font-family:var(--mono);letter-spacing:.12em;color:var(--mute)">Home · Mapa · Perfil</div>
+            <div class="proj__arrows">
+              <button class="proj__arrow" data-prev>←</button>
+              <button class="proj__arrow" data-next>→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 2 — GLOWUP -->
+    <article class="proj" id="proj-glow" data-screen-label="05b GlowUp">
+      <div class="proj__grid">
+        <div class="proj__meta">
+          <div class="proj__index"><span>02 / 03</span><span>2026</span></div>
+          <div class="proj__name">Glow<i>Up.</i></div>
+          <div class="proj__tags">
+            <div class="proj__tag">SaaS</div>
+            <div class="proj__tag">Turnos</div>
+            <div class="proj__tag">Multi-rubro</div>
+            <div class="proj__tag">WhatsApp Auto</div>
+          </div>
+          <p class="proj__tagline">Plataforma de reservas para peluquerías, barberías, spas y estudios de belleza. Dos productos en uno: marketplace del lado del cliente y agenda inteligente del lado del negocio.</p>
+          <a class="proj__link" href="https://glowup-turnos.vercel.app" target="_blank" rel="noopener">Ver en producción</a>
+        </div>
+        <div>
+          <div class="proj__carousel" data-carousel>
+            <div class="proj__slides">
+              <!-- Slide 1: home -->
+              <div class="proj__slide">
+                <div class="mock mock--glow">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">glowup-turnos.vercel.app</div>
+                  <div class="glow-app">
+                    <div class="glow-app__top"><span>9:41</span><span>● ● ●</span></div>
+                    <div class="glow-app__hi">Hola, Sofi<i>brillá hoy</i></div>
+                    <div class="glow-card">
+                      <div class="glow-card__av">N</div>
+                      <div class="glow-card__body">
+                        <div class="glow-card__name">Nina Studio</div>
+                        <div class="glow-card__sub">★ 4.9 · Palermo · 18:30</div>
+                      </div>
+                      <div class="glow-card__badge">Hoy</div>
+                    </div>
+                    <div class="glow-row">
+                      <div class="glow-row__av">L</div>
+                      <div class="glow-row__t"><b>Loop Hair Lab</b><span>★ 4.8 · Villa Crespo</span></div>
+                      <div class="glow-row__time">Nuevo</div>
+                    </div>
+                    <div class="glow-row">
+                      <div class="glow-row__av">B</div>
+                      <div class="glow-row__t"><b>Brisa Spa</b><span>★ 5.0 · Recoleta</span></div>
+                      <div class="glow-row__time">−20%</div>
+                    </div>
+                    <div class="glow-row">
+                      <div class="glow-row__av">M</div>
+                      <div class="glow-row__t"><b>MLJ+ Nails</b><span>★ 4.9 · Núñez</span></div>
+                      <div class="glow-row__time">21:00</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: agenda dashboard -->
+              <div class="proj__slide">
+                <div class="mock mock--glow-agenda">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">glowup-turnos.vercel.app/agenda</div>
+                  <div class="glow-agenda">
+                    <div class="glow-agenda__head">
+                      <h4>Agenda · <i>Hoy</i></h4>
+                      <div class="glow-agenda__pill">+5 nuevos</div>
+                    </div>
+                    <div class="glow-week">
+                      <div class="glow-week__d">L<b>18</b></div>
+                      <div class="glow-week__d active">M<b>19</b></div>
+                      <div class="glow-week__d">M<b>20</b></div>
+                      <div class="glow-week__d">J<b>21</b></div>
+                      <div class="glow-week__d">V<b>22</b></div>
+                      <div class="glow-week__d">S<b>23</b></div>
+                      <div class="glow-week__d">D<b>24</b></div>
+                    </div>
+                    <div class="glow-slot">
+                      <div class="glow-slot__time">09:30</div>
+                      <div class="glow-slot__b"><b>María González</b><span>Color + brushing · 90 min</span></div>
+                    </div>
+                    <div class="glow-slot">
+                      <div class="glow-slot__time">11:00</div>
+                      <div class="glow-slot__b"><b>Julia Pérez</b><span>Manicura semi · 45 min</span></div>
+                    </div>
+                    <div class="glow-slot">
+                      <div class="glow-slot__time">14:00</div>
+                      <div class="glow-slot__b"><b>Federico Rey</b><span>Corte + barba · 50 min</span></div>
+                    </div>
+                    <div class="glow-slot">
+                      <div class="glow-slot__time">15:30</div>
+                      <div class="glow-slot__b"><b>Camila S.</b><span>Lash lift · 60 min</span></div>
+                    </div>
+                    <div class="glow-total">
+                      <span>Total del día</span>
+                      <b>$ 78.500</b>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: explore -->
+              <div class="proj__slide">
+                <div class="mock mock--glow-explore">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">glowup-turnos.vercel.app/explore</div>
+                  <div class="glow-explore">
+                    <div class="glow-explore__search">Buscá tu rubro o barrio…</div>
+                    <div class="glow-explore__chips">
+                      <div class="glow-chip on">Todo</div>
+                      <div class="glow-chip">Barbería</div>
+                      <div class="glow-chip">Uñas</div>
+                      <div class="glow-chip">Spa</div>
+                    </div>
+                    <h5>¿Qué te <i>antoja</i> hoy?</h5>
+                    <div class="glow-tile">
+                      <div class="glow-tile__c t1"><b>Barbería</b><span>+ 124 lugares</span></div>
+                      <div class="glow-tile__c t2"><b>Uñas</b><span>+ 88 lugares</span></div>
+                      <div class="glow-tile__c t3"><b>Spa</b><span>+ 41 lugares</span></div>
+                      <div class="glow-tile__c t4"><b>Lash & Cejas</b><span>+ 32 lugares</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj__ctrls">
+            <div class="proj__dots">
+              <button class="proj__dot active" data-dot="0"></button>
+              <button class="proj__dot" data-dot="1"></button>
+              <button class="proj__dot" data-dot="2"></button>
+            </div>
+            <div style="font-family:var(--mono);letter-spacing:.12em;color:var(--mute)">Home · Agenda · Explorar</div>
+            <div class="proj__arrows">
+              <button class="proj__arrow" data-prev>←</button>
+              <button class="proj__arrow" data-next>→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- PROJECT 3 — AGAMOTTO -->
+    <article class="proj" id="proj-ag" data-screen-label="05c Agamotto">
+      <div class="proj__grid">
+        <div class="proj__meta">
+          <div class="proj__index"><span>03 / 03</span><span>2026</span></div>
+          <div class="proj__name">Aga<i>motto.</i></div>
+          <div class="proj__tags">
+            <div class="proj__tag">Predictivo</div>
+            <div class="proj__tag">Data</div>
+            <div class="proj__tag">Mundial 2026</div>
+            <div class="proj__tag">Terminal UI</div>
+          </div>
+          <p class="proj__tagline">Plataforma predictiva para los 104 partidos del Mundial 2026. Ensamble de modelos (Elo + Dixon-Coles + LightGBM) corriendo 100.000 simulaciones por noche. Interfaz inspirada en terminales financieras.</p>
+          <a class="proj__link" href="https://agamotto-one.vercel.app" target="_blank" rel="noopener">Ver en producción</a>
+        </div>
+        <div>
+          <div class="proj__carousel" data-carousel>
+            <div class="proj__slides">
+              <!-- Slide 1: probability table -->
+              <div class="proj__slide">
+                <div class="mock mock--ag">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">agamotto.app · base</div>
+                  <div class="ag-app">
+                    <div class="ag-app__top"><span><b>AGAMOTTO</b> / v0.5.0</span><span><i>●</i> ONLINE · TLS 1.3</span></div>
+                    <div class="ag-h"><h4>Probabilidad de título · Línea base</h4><span>100k sim/noche</span></div>
+                    <table class="ag-table">
+                      <thead><tr><th>#</th><th>SEL</th><th>ELO</th><th>R16</th><th>SF</th><th>P(TÍTULO)</th></tr></thead>
+                      <tbody>
+                        <tr><td>01</td><td><span class="flag">🇦🇷</span>ARG</td><td>1924</td><td class="pct">73.7%</td><td class="pct">34.9%</td><td class="pct">17.5% <span class="bar"><i style="width:80%"></i></span></td></tr>
+                        <tr><td>02</td><td><span class="flag">🇪🇸</span>ESP</td><td>1903</td><td class="pct">68.0%</td><td class="pct">32.0%</td><td class="pct">14.2% <span class="bar"><i style="width:65%"></i></span></td></tr>
+                        <tr><td>03</td><td><span class="flag">🇲🇦</span>MAR</td><td>1812</td><td class="pct med">58.3%</td><td class="pct med">20.6%</td><td class="pct med">7.0% <span class="bar"><i style="width:32%;background:#E8B85A"></i></span></td></tr>
+                        <tr><td>04</td><td><span class="flag">🇯🇵</span>JPN</td><td>1798</td><td class="pct med">56.4%</td><td class="pct med">21.5%</td><td class="pct med">6.8% <span class="bar"><i style="width:31%;background:#E8B85A"></i></span></td></tr>
+                        <tr><td>05</td><td><span class="flag">🇧🇷</span>BRA</td><td>1822</td><td class="pct med">61.5%</td><td class="pct med">22.6%</td><td class="pct med">6.5% <span class="bar"><i style="width:30%;background:#E8B85A"></i></span></td></tr>
+                        <tr><td>06</td><td><span class="flag">🇫🇷</span>FRA</td><td>1784</td><td class="pct lo">55.4%</td><td class="pct lo">17.4%</td><td class="pct lo">5.0% <span class="bar"><i style="width:23%;background:#76798A"></i></span></td></tr>
+                        <tr><td>07</td><td><span class="flag">🇵🇹</span>POR</td><td>1771</td><td class="pct lo">53.8%</td><td class="pct lo">16.9%</td><td class="pct lo">4.5% <span class="bar"><i style="width:21%;background:#76798A"></i></span></td></tr>
+                        <tr><td>08</td><td><span class="flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span>ENG</td><td>1769</td><td class="pct lo">53.8%</td><td class="pct lo">16.0%</td><td class="pct lo">4.5% <span class="bar"><i style="width:21%;background:#76798A"></i></span></td></tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2: match -->
+              <div class="proj__slide">
+                <div class="mock mock--ag-match">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">agamotto.app · matches</div>
+                  <div class="ag-matches">
+                    <div class="ag-matches__top"><span>Próximo partido</span><span>11-JUN · 18:00</span></div>
+                    <div class="ag-match">
+                      <div class="ag-match__meta"><span>GRUPO A · J1</span><span>📍 Mercedes-Benz Stadium</span></div>
+                      <div class="ag-match__teams">
+                        <div class="l"><span class="flag">🇲🇽</span>México</div>
+                        <div class="vs">VS</div>
+                        <div class="r">Polonia<span class="flag" style="margin-left:8px;margin-right:0">🇵🇱</span></div>
+                      </div>
+                      <div class="ag-match__prob">
+                        <div class="ag-match__prob-col win"><b>56.3%</b><span>Gana MEX</span></div>
+                        <div class="ag-match__prob-col"><b>24.7%</b><span>Empate</span></div>
+                        <div class="ag-match__prob-col"><b>19.0%</b><span>Gana POL</span></div>
+                      </div>
+                      <div class="ag-match__bar"><div class="w" style="flex:563"></div><div class="d" style="flex:247"></div><div class="l" style="flex:190"></div></div>
+                      <div class="ag-match__stats">
+                        <div>xG MEX<b>1.43</b></div>
+                        <div>BTTS<b>44.3%</b></div>
+                        <div>xG POL<b>0.86</b></div>
+                        <div>Result + prob<b>1–0 / 14.1%</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3: bracket -->
+              <div class="proj__slide">
+                <div class="mock mock--ag-bracket">
+                  <div class="mock__chrome"><i></i><i></i><i></i></div>
+                  <div class="mock__url">agamotto.app · llave</div>
+                  <div class="ag-bracket">
+                    <div class="ag-bracket__top"><h4>Llave proyectada · Mundial 2026</h4><span>iter · 100k</span></div>
+                    <div class="ag-bracket__viz">
+                      <div style="display:flex;flex-direction:column;gap:14px">
+                        <div class="ag-pair">
+                          <div class="ag-pair__t win">🇦🇷 ARG <span class="pct">2.1</span></div>
+                          <div class="ag-pair__t">🇲🇽 MEX <span class="pct">1.0</span></div>
+                        </div>
+                        <div class="ag-pair">
+                          <div class="ag-pair__t win">🇪🇸 ESP <span class="pct">3.0</span></div>
+                          <div class="ag-pair__t">🇲🇦 MAR <span class="pct">1.0</span></div>
+                        </div>
+                        <div class="ag-pair">
+                          <div class="ag-pair__t">🇧🇷 BRA <span class="pct">1.0</span></div>
+                          <div class="ag-pair__t win">🇯🇵 JPN <span class="pct">2.0</span></div>
+                        </div>
+                      </div>
+                      <div class="ag-final">
+                        <span>Final proyectada</span>
+                        <b>🇦🇷 ARG</b>
+                        <em>vs</em>
+                        <b style="color:#9AA0B2">🇪🇸 ESP</b>
+                      </div>
+                      <div style="display:flex;flex-direction:column;gap:14px">
+                        <div class="ag-pair">
+                          <div class="ag-pair__t win">🇫🇷 FRA <span class="pct">1.8</span></div>
+                          <div class="ag-pair__t">🇪🇨 ECU <span class="pct">1.0</span></div>
+                        </div>
+                        <div class="ag-pair">
+                          <div class="ag-pair__t">🏴󠁧󠁢󠁥󠁮󠁧󠁿 ENG <span class="pct">1.0</span></div>
+                          <div class="ag-pair__t win">🇵🇹 POR <span class="pct">1.4</span></div>
+                        </div>
+                        <div class="ag-pair">
+                          <div class="ag-pair__t win">🇨🇴 COL <span class="pct">1.7</span></div>
+                          <div class="ag-pair__t">🇳🇱 NED <span class="pct">1.0</span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ag-bracket__foot"><span>Modelo · agamotto_ensemble_0.3.0</span><span>Recalibrado 04:00 UTC</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="proj__ctrls">
+            <div class="proj__dots">
+              <button class="proj__dot active" data-dot="0"></button>
+              <button class="proj__dot" data-dot="1"></button>
+              <button class="proj__dot" data-dot="2"></button>
+            </div>
+            <div style="font-family:var(--mono);letter-spacing:.12em;color:var(--mute)">Base · Match · Llave</div>
+            <div class="proj__arrows">
+              <button class="proj__arrow" data-prev>←</button>
+              <button class="proj__arrow" data-next>→</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ AUDIENCIA ============ -->
+<section class="audience" data-screen-label="06 Audiencia">
+  <div class="audience__head">
+    <h2 class="reveal" data-reveal>Para quién <i>trabajamos.</i></h2>
+    <p class="fade-up">Negocios reales con ganas de crecer sin romperse en el camino. Si te ves acá, hablemos.</p>
+  </div>
+  <div class="audience__grid">
+    <div class="aud-cell">
+      <div class="aud-cell__n">/ 01</div>
+      <h3>Complejos deportivos</h3>
+      <p>Gestión de canchas, turnos, socios y comunicación con miembros sin perder un mensaje.</p>
+      <div class="aud-cell__ic">⚽</div>
+    </div>
+    <div class="aud-cell">
+      <div class="aud-cell__n">/ 02</div>
+      <h3>Talleres & lubricentros</h3>
+      <p>Seguimiento de reparaciones, stock de repuestos e historial de cada vehículo.</p>
+      <div class="aud-cell__ic">⚙</div>
+    </div>
+    <div class="aud-cell">
+      <div class="aud-cell__n">/ 03</div>
+      <h3>Negocios de servicios</h3>
+      <p>Atención profesional, presupuestos claros y una marca que se ve y se escucha igual en todos lados.</p>
+      <div class="aud-cell__ic">✦</div>
+    </div>
+    <div class="aud-cell">
+      <div class="aud-cell__n">/ 04</div>
+      <h3>Pymes en crecimiento</h3>
+      <p>Bases sólidas para manejar la escala sin caos — procesos, datos y voz ordenados.</p>
+      <div class="aud-cell__ic">↗</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIOS ============ -->
+<section class="testimonios" id="testimonios" data-screen-label="07 Testimonios">
+  <div class="testimonios__head">
+    <div>
+      <div class="eyebrow">Testimonios</div>
+      <h2 class="reveal" data-reveal style="margin-top:24px">Lo que dicen los <i>negocios.</i></h2>
+    </div>
+    <div style="font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--mute);text-transform:uppercase;align-self:end">Casos 2025—2026</div>
+  </div>
+
+  <div style="overflow:hidden">
+    <div class="t-row">
+      <div class="t-card"><div class="t-card__quote">Nos desarrollaron un sistema a medida para el taller. Ahora trackeo cada reparación y tengo el stock al día. Imprescindible.</div><div class="t-card__foot"><div class="t-card__av">EM</div><div class="t-card__name"><b>Emiliano M.</b><span>Taller Muñoz · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">Julieta nos armó la estrategia de redes desde cero. En tres meses duplicamos las consultas y por fin tenemos identidad.</div><div class="t-card__foot"><div class="t-card__av">LR</div><div class="t-card__name"><b>Laura R.</b><span>Delicias Las Moras · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">Pasamos de un cuaderno a un panel digital en una semana. La diferencia es abismal — sabemos exactamente qué pasa cada hora.</div><div class="t-card__foot"><div class="t-card__av">DG</div><div class="t-card__name"><b>Diego G.</b><span>La Canchita de Núñez · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">El proceso de descubrimiento fue mejor que la mitad de las consultorías que pagué antes. Encontraron problemas que ni veía.</div><div class="t-card__foot"><div class="t-card__av">MS</div><div class="t-card__name"><b>Mariela S.</b><span>Spa Brisa · Córdoba</span></div></div></div>
+      <!-- duplicate for seamless loop -->
+      <div class="t-card"><div class="t-card__quote">Nos desarrollaron un sistema a medida para el taller. Ahora trackeo cada reparación y tengo el stock al día. Imprescindible.</div><div class="t-card__foot"><div class="t-card__av">EM</div><div class="t-card__name"><b>Emiliano M.</b><span>Taller Muñoz · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">Julieta nos armó la estrategia de redes desde cero. En tres meses duplicamos las consultas y por fin tenemos identidad.</div><div class="t-card__foot"><div class="t-card__av">LR</div><div class="t-card__name"><b>Laura R.</b><span>Delicias Las Moras · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">Pasamos de un cuaderno a un panel digital en una semana. La diferencia es abismal — sabemos exactamente qué pasa cada hora.</div><div class="t-card__foot"><div class="t-card__av">DG</div><div class="t-card__name"><b>Diego G.</b><span>La Canchita de Núñez · Buenos Aires</span></div></div></div>
+      <div class="t-card"><div class="t-card__quote">El proceso de descubrimiento fue mejor que la mitad de las consultorías que pagué antes. Encontraron problemas que ni veía.</div><div class="t-card__foot"><div class="t-card__av">MS</div><div class="t-card__name"><b>Mariela S.</b><span>Spa Brisa · Córdoba</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq" data-screen-label="08 FAQ">
+  <div class="eyebrow">Dudas comunes</div>
+  <div class="faq__grid">
+    <h2 class="reveal" data-reveal>Preguntas <i>frecuentes.</i></h2>
+    <div class="faq__list">
+      <div class="faq__item open"><div class="faq__q">¿Qué tipo de sistemas desarrollan?<div class="ic">+</div></div><div class="faq__a"><p>Sistemas de turnos, reservas, gestión de stock, paneles internos y seguimiento de servicios. Cada uno se adapta al rubro — un taller necesita algo muy distinto a un complejo deportivo, y eso lo respetamos desde el día uno.</p></div></div>
+      <div class="faq__item"><div class="faq__q">¿El sistema es igual para todos?<div class="ic">+</div></div><div class="faq__a"><p>No. Primero analizamos cómo trabajás hoy y después diseñamos una solución a medida. Las plantillas se rompen rápido con cualquier negocio que tenga personalidad.</p></div></div>
+      <div class="faq__item"><div class="faq__q">¿Puedo seguir usando WhatsApp?<div class="ic">+</div></div><div class="faq__a"><p>Sí, totalmente. El sistema no reemplaza WhatsApp — organiza la información para que no dependa solo de los mensajes. Lo que se hablaba antes en chats sueltos, queda registrado y accesible.</p></div></div>
+      <div class="faq__item"><div class="faq__q">¿También trabajan redes sociales?<div class="ic">+</div></div><div class="faq__a"><p>Sí. Estrategia, contenido, identidad y métricas. Si tu negocio no comunica bien, los sistemas más lindos del mundo no alcanzan.</p></div></div>
+      <div class="faq__item"><div class="faq__q">¿Cuánto tiempo lleva implementarlo?<div class="ic">+</div></div><div class="faq__a"><p>Depende del alcance. Una landing toma 2 a 3 semanas; un sistema completo de turnos arranca entre 4 y 8 semanas. La implementación es progresiva — nunca un "lunes apagamos el viejo y prendemos el nuevo".</p></div></div>
+      <div class="faq__item"><div class="faq__q">¿Cómo empiezo?<div class="ic">+</div></div><div class="faq__a"><p>Una conversación. Analizamos cómo trabajás hoy, evaluamos qué se puede mejorar y te volvemos con una propuesta concreta. Sin compromiso — y si no encajamos, te decimos.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="contact" id="contacto" data-screen-label="09 Contacto">
+  <div class="contact__grid">
+    <div>
+      <div class="eyebrow">Contacto</div>
+      <h2 class="reveal" data-reveal style="margin-top:24px">Empecemos a <i>trabajar juntos.</i></h2>
+      <p class="lead">Contanos sobre tu negocio y lo que necesitás. Te respondemos en menos de 24 horas con una propuesta personalizada.</p>
+
+      <div class="contact__links">
+        <a class="contact__link" href="https://wa.me/5491163515966" target="_blank" rel="noopener">
+          <span>WhatsApp <span class="arr">↗</span></span>
+          <b>+54 9 11 6351 5966</b>
+        </a>
+        <a class="contact__link" href="mailto:franco.coria.r@gmail.com">
+          <span>Email <span class="arr">↗</span></span>
+          <b>franco.coria.r@gmail.com</b>
+        </a>
+        <a class="contact__link" href="https://instagram.com/jf.digitalstudio" target="_blank" rel="noopener">
+          <span>Instagram <span class="arr">↗</span></span>
+          <b>@jf.digitalstudio</b>
+        </a>
+      </div>
     </div>
 
-    <!-- ========== NAVIGATION ========== -->
-    <nav class="navbar blur-bg" id="navbar" role="navigation" aria-label="Navegación principal">
-        <div class="container navbar-inner">
-            <a href="#" class="logo" aria-label="JF Digital Studio - Inicio">
-                <span class="logo-text">JF</span>
-                <div class="logo-divider"></div>
-                <span class="logo-subtitle">Digital Studio</span>
-            </a>
+    <form class="form" id="contact-form">
+      <h3>¿Tenés un <i>proyecto</i> en mente?</h3>
+      <div class="form__row"><label for="cf-nombre">Nombre</label><input id="cf-nombre" type="text" placeholder="Cómo te llamás" required /></div>
+      <div class="form__row"><label for="cf-email">Email</label><input id="cf-email" type="email" placeholder="tu@email.com" required /></div>
+      <div class="form__row"><label for="cf-negocio">Negocio</label><input id="cf-negocio" type="text" placeholder="Nombre y rubro" /></div>
+      <div class="form__row"><label for="cf-servicio">Servicio</label>
+        <select id="cf-servicio">
+          <option>Desarrollo de sistemas</option>
+          <option>Marketing y redes</option>
+          <option>Ambos</option>
+          <option>No estoy seguro</option>
+        </select>
+      </div>
+      <div class="form__row"><label for="cf-mensaje">Contanos</label><textarea id="cf-mensaje" placeholder="En qué pensás…"></textarea></div>
+      <button class="btn" type="submit">Enviar por WhatsApp <span class="arr"></span></button>
+      <div id="sent-msg" style="display:none;font-family:var(--mono);font-size:12px;color:var(--accent-2);letter-spacing:.08em;text-transform:uppercase;margin-top:8px">✓ Te abrimos WhatsApp con el mensaje listo para enviar.</div>
+    </form>
+  </div>
+</section>
 
-            <div class="nav-links" id="nav-links">
-                <a href="#problema" class="nav-link">El Problema</a>
-                <a href="#que-hacemos" class="nav-link">Qué Hacemos</a>
-                <a href="#proceso" class="nav-link">Cómo Trabajamos</a>
-                <a href="#testimonios" class="nav-link">Testimonios</a>
-                <a href="#contacto" class="nav-cta">Contacto</a>
-            </div>
+<!-- Footer wordmark -->
+<div class="foot__mark"><span>JF</span>.digital<i style="font-style:italic;color:var(--accent)">·</i>studio</div>
 
-            <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú de navegación"
-                aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+<!-- Footer -->
+<footer>
+  <div class="foot__top">
+    <div>
+      <div class="foot__brand">JF <span>·</span></div>
+      <p>Estrategia y sistemas para negocios reales que buscan crecer con orden y profesionalismo.</p>
+    </div>
+    <div class="foot__col">
+      <h4>Navegación</h4>
+      <ul>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#perfiles">Perfiles</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <h4>Redes</h4>
+      <ul>
+        <li><a href="https://instagram.com/jf.digitalstudio">Instagram ↗</a></li>
+        <li><a href="https://linkedin.com/company/jfdigitalstudio">LinkedIn ↗</a></li>
+        <li><a href="https://wa.me/5491163515966">WhatsApp ↗</a></li>
+      </ul>
+    </div>
+    <div class="foot__col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacidad</a></li>
+        <li><a href="#">Términos</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot__bot">
+    <span>© 2026 JF Digital Studio · <b>Córdoba, Argentina</b></span>
+    <span>Disponible Q2 · 2026</span>
+  </div>
+</footer>
 
-        <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación móvil">
-            <a href="#problema" class="nav-link">El Problema</a>
-            <a href="#que-hacemos" class="nav-link">Qué Hacemos</a>
-            <a href="#proceso" class="nav-link">Cómo Trabajamos</a>
-            <a href="#testimonios" class="nav-link">Testimonios</a>
-            <a href="#contacto" class="nav-cta">Contacto</a>
-        </div>
-    </nav>
+</main>
 
-    <!-- ========== HERO SECTION ========== -->
-    <header class="hero" id="hero">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80"
-                alt="Espacio de trabajo moderno con tecnología" loading="eager">
-            <div class="hero-overlay"></div>
-        </div>
+<!-- WhatsApp floating button -->
+<a href="https://wa.me/5491163515966" class="wa-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
 
-        <div class="container hero-content">
-            <div class="hero-badge reveal">
-                <span class="dot"></span>
-                <span>Aceptando nuevos clientes · 2026</span>
-            </div>
+<script>
+// ----- Curtain dismiss
+window.addEventListener('load', ()=>{
+  setTimeout(()=>{ document.getElementById('curtain').classList.add('done'); }, 1600);
+});
 
-            <h1 class="reveal">
-                Marketing y sistemas<br>
-                diseñados para <span class="italic">negocios<br>reales.</span>
-            </h1>
+// ----- Word splitter for reveal
+document.querySelectorAll('[data-reveal]').forEach(el=>{
+  const html = el.innerHTML;
+  // wrap each word (preserving <i> and <span class=mark>)
+  const tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  function wrapWords(node){
+    const out = document.createDocumentFragment();
+    node.childNodes.forEach(child=>{
+      if(child.nodeType === 3){ // text
+        const words = child.textContent.split(/(\s+)/);
+        words.forEach(w=>{
+          if(/^\s+$/.test(w)){ out.appendChild(document.createTextNode(w)); return; }
+          if(!w) return;
+          const span = document.createElement('span');
+          span.className = 'w';
+          const inner = document.createElement('span');
+          inner.textContent = w;
+          span.appendChild(inner);
+          out.appendChild(span);
+        });
+      } else {
+        const clone = child.cloneNode(false);
+        // for inline elements like <i> or <span class=mark>, wrap inner text in spans
+        clone.appendChild(wrapWords(child));
+        out.appendChild(clone);
+      }
+    });
+    return out;
+  }
+  el.innerHTML = '';
+  el.appendChild(wrapWords(tmp));
+});
 
-            <p class="hero-description reveal">
-                Ordenamos la comunicación y desarrollamos sistemas a medida para que los negocios crezcan con
-                estructura.
-            </p>
+// ----- IntersectionObserver for reveal + fade-up
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const delay = e.target.getAttribute('data-delay') || 0;
+      setTimeout(()=>e.target.classList.add('in'), +delay);
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.15});
+document.querySelectorAll('[data-reveal], .reveal, .fade-up').forEach(el=>{
+  if(el.hasAttribute('data-reveal')) el.classList.add('reveal');
+  io.observe(el);
+});
 
-            <p class="hero-tagline reveal">Para talleres, complejos deportivos y negocios de servicios en crecimiento.
-            </p>
+// ----- Cursor
+const cursor = document.getElementById('cursor');
+const ring = document.getElementById('cursor-ring');
+let tx=0,ty=0,rx=0,ry=0;
+document.addEventListener('mousemove', e=>{
+  tx=e.clientX; ty=e.clientY;
+  cursor.style.transform = `translate(${tx}px, ${ty}px) translate(-50%, -50%)`;
+});
+function raf(){
+  rx += (tx - rx) * 0.18;
+  ry += (ty - ry) * 0.18;
+  ring.style.transform = `translate(${rx}px, ${ry}px) translate(-50%, -50%)`;
+  requestAnimationFrame(raf);
+}
+raf();
+document.querySelectorAll('a, button, .proj, .aud-cell, .faq__item').forEach(el=>{
+  el.addEventListener('mouseenter', ()=>{cursor.classList.add('lg'); ring.classList.add('lg');});
+  el.addEventListener('mouseleave', ()=>{cursor.classList.remove('lg'); ring.classList.remove('lg');});
+});
 
-            <div class="hero-actions reveal">
-                <a href="#proceso" class="btn-primary">
-                    <span>Ver cómo trabajamos</span>
-                </a>
-                <a href="#contacto" class="btn-secondary">
-                    <span>Agendar una reunión</span>
-                    <span class="material-symbols-outlined" style="font-size:1rem;">arrow_forward</span>
-                </a>
-            </div>
-        </div>
+// ----- FAQ accordion
+document.querySelectorAll('.faq__item').forEach(item=>{
+  item.querySelector('.faq__q').addEventListener('click', ()=>{
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq__item').forEach(i=>i.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  });
+});
 
+// ----- Project carousels (drag + dots + arrows + auto-advance on intersect)
+document.querySelectorAll('[data-carousel]').forEach(car=>{
+  const slidesWrap = car.querySelector('.proj__slides');
+  const slides = car.querySelectorAll('.proj__slide');
+  const wrap = car.closest('.proj__grid').querySelector('.proj__ctrls');
+  const dots = wrap.querySelectorAll('.proj__dot');
+  const prev = wrap.querySelector('[data-prev]');
+  const next = wrap.querySelector('[data-next]');
+  let idx = 0;
+  function go(i){
+    idx = (i + slides.length) % slides.length;
+    slidesWrap.style.transform = `translateX(-${idx*100}%)`;
+    dots.forEach((d,j)=>d.classList.toggle('active', j===idx));
+  }
+  prev.addEventListener('click', ()=>go(idx-1));
+  next.addEventListener('click', ()=>go(idx+1));
+  dots.forEach((d,j)=>d.addEventListener('click', ()=>go(j)));
+  // auto when in view
+  let timer=null;
+  const obs = new IntersectionObserver(([e])=>{
+    if(e.isIntersecting){ timer = setInterval(()=>go(idx+1), 4200); }
+    else { clearInterval(timer); }
+  }, {threshold:0.4});
+  obs.observe(car);
+});
 
-    </header>
+// ----- Proceso scroll-driven progress
+const rail = document.getElementById('proceso-rail');
+const bar = document.getElementById('proceso-bar');
+const steps = rail.querySelectorAll('.step');
+window.addEventListener('scroll', ()=>{
+  const r = rail.getBoundingClientRect();
+  const vh = window.innerHeight;
+  // progress from when rail top hits 80% viewport to when bottom hits 20%
+  const total = r.height + vh * 0.6;
+  const passed = (vh*0.8) - r.top;
+  const p = Math.max(0, Math.min(1, passed / total));
+  bar.style.width = (p*100)+'%';
+  const stepActive = Math.min(steps.length-1, Math.floor(p * steps.length * 1.05));
+  steps.forEach((s,i)=> s.classList.toggle('active', i <= stepActive));
+}, {passive:true});
 
-    <!-- ========== VALUE PROPOSITION BAR ========== -->
-    <section class="section" style="padding: 0;" aria-label="Propuesta de valor de JF Digital Studio">
-        <div class="container">
-            <div class="stats-bar stagger-children reveal">
-                <div class="stat-item value-item">
-                    <div class="value-dot"></div>
-                    <h4 class="value-title">Enfoque personalizado</h4>
-                    <p class="value-desc">Cada negocio es analizado antes de desarrollar cualquier sistema.</p>
-                </div>
-                <div class="stat-item value-item">
-                    <div class="value-dot"></div>
-                    <h4 class="value-title">Soluciones a medida</h4>
-                    <p class="value-desc">No utilizamos plantillas genéricas.</p>
-                </div>
-                <div class="stat-item value-item">
-                    <div class="value-dot"></div>
-                    <h4 class="value-title">Integración real</h4>
-                    <p class="value-desc">Estrategia y desarrollo trabajando en conjunto.</p>
-                </div>
-                <div class="stat-item value-item">
-                    <div class="value-dot"></div>
-                    <h4 class="value-title">Implementación acompañada</h4>
-                    <p class="value-desc">No solo desarrollamos. Acompañamos el proceso.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+// ----- Smooth anchor scroll
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const href = a.getAttribute('href');
+    if(href.length<2) return;
+    const t = document.querySelector(href);
+    if(t){ e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY, behavior:'smooth'}); }
+  });
+});
 
-    <!-- ========== CONTEXT / PROBLEM SECTION ========== -->
-    <section class="section context-section" id="problema" aria-label="El problema que resolvemos">
-        <div class="container">
-            <div class="context-inner">
-                <span class="section-label reveal">Contexto</span>
-                <h2 class="section-title reveal">
-                    Cuando el negocio crece,<br>
-                    <span class="italic">el desorden crece con él.</span>
-                </h2>
-                <div class="section-divider reveal"></div>
-                <p class="section-subtitle mx-auto reveal" style="text-align:center;">
-                    El crecimiento es el objetivo, pero sin estructura genera presión. Muchos negocios no fallan por
-                    falta de ventas, sino por falta de orden interno. Creamos el puente entre donde estás hoy y la
-                    estructura que necesitás para escalar.
-                </p>
-            </div>
-        </div>
-    </section>
+// ----- Contact form -> WhatsApp compose
+const contactForm = document.getElementById('contact-form');
+if(contactForm){
+  contactForm.addEventListener('submit', e=>{
+    e.preventDefault();
+    const val = id => (document.getElementById(id)?.value || '').trim();
+    const nombre = val('cf-nombre'), email = val('cf-email'), negocio = val('cf-negocio'),
+          servicio = val('cf-servicio'), mensaje = val('cf-mensaje');
+    const text = [
+      'Hola JF Digital Studio 👋',
+      nombre   && `Soy ${nombre}.`,
+      negocio  && `Negocio: ${negocio}.`,
+      servicio && `Me interesa: ${servicio}.`,
+      email    && `Email: ${email}.`,
+      mensaje  && `\n${mensaje}`
+    ].filter(Boolean).join('\n');
+    window.open('https://wa.me/5491163515966?text=' + encodeURIComponent(text), '_blank', 'noopener');
+    document.getElementById('sent-msg').style.display = 'block';
+    contactForm.reset();
+  });
+}
 
-    <!-- ========== SERVICES SECTION ========== -->
-    <section class="section" id="que-hacemos" aria-label="Nuestros servicios">
-        <div class="container">
-            <div class="text-center" style="margin-bottom:3rem;">
-                <span class="section-label reveal">Lo que ofrecemos</span>
-                <h2 class="section-title reveal">Dos perfiles, <span class="italic">un solo equipo.</span></h2>
-            </div>
-            <div class="services-grid reveal" style="gap: 2rem; background: transparent; border: none;">
-                <div class="service-card">
-                    <div class="service-label">Franco</div>
-                    <h3 class="service-title">Tecnología y Sistemas</h3>
-                    <p class="service-desc">Escalar requiere precisión técnica. Construimos la columna vertebral digital
-                        de tu operación.</p>
-                    <div class="service-divider"></div>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Gestión de turnos y reservas
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Sistemas para talleres y stock
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Paneles de control internos
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Automatización de procesos
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Desarrollo web a medida
-                        </li>
-                    </ul>
-                </div>
-                <div class="service-card">
-                    <div class="service-label">Julieta</div>
-                    <h3 class="service-title">Estrategia y Comunicación</h3>
-                    <p class="service-desc">Un buen producto necesita una voz clara. Definimos tu posición en el mercado
-                        y cómo te comunicás.</p>
-                    <div class="service-divider"></div>
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Gestión estratégica de redes sociales
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Planificación de contenido
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Identidad y tono de marca
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Campañas de marketing digital
-                        </li>
-                        <li class="service-item">
-                            <span class="material-symbols-outlined">remove</span>
-                            Análisis de métricas y resultados
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== EJEMPLO VISUAL ========== -->
-    <section class="section ejemplo-section" id="ejemplo" aria-label="Ejemplo de sistema desarrollado">
-        <div class="container">
-            <div class="text-center" style="margin-bottom:3rem;">
-                <span class="section-label reveal">Ejemplo</span>
-                <h2 class="section-title reveal">Un ejemplo de cómo <span class="italic">funciona.</span></h2>
-                <p class="section-subtitle mx-auto reveal" style="text-align:center;">Así se ve un sistema desarrollado
-                    a medida para un negocio real.</p>
-            </div>
-            <div class="ejemplo-image-wrapper reveal">
-                <img src="ejemplo-sistema.png" alt="Captura del sistema de reservas desarrollado por JF Digital Studio"
-                    class="ejemplo-image" loading="lazy">
-            </div>
-            <div class="ejemplo-caption reveal">
-                <h4>Sistema de reservas para complejos deportivos</h4>
-                <p>Organización clara de turnos, disponibilidad en tiempo real y registro automático.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== PROCESS SECTION ========== -->
-    <section class="section process-section" id="proceso" aria-label="Nuestro proceso de trabajo">
-        <div class="container">
-            <h2 class="section-title text-center reveal" style="margin-bottom:4rem;">Cómo Trabajamos</h2>
-            <div class="process-grid stagger-children reveal">
-                <div class="process-step">
-                    <div class="process-icon">
-                        <span class="material-symbols-outlined">search</span>
-                    </div>
-                    <h4 class="process-number">01. Analizamos</h4>
-                    <p class="process-text">Auditamos tus flujos de trabajo actuales, identificamos puntos críticos y
-                        oportunidades de mejora.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <span class="material-symbols-outlined">edit_note</span>
-                    </div>
-                    <h4 class="process-number">02. Diseñamos</h4>
-                    <p class="process-text">Creamos la hoja de ruta estratégica y técnica personalizada para tu negocio.
-                    </p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <span class="material-symbols-outlined">data_object</span>
-                    </div>
-                    <h4 class="process-number">03. Desarrollamos</h4>
-                    <p class="process-text">Construimos las herramientas digitales y el plan de comunicación integral.
-                    </p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <span class="material-symbols-outlined">verified_user</span>
-                    </div>
-                    <h4 class="process-number">04. Implementamos</h4>
-                    <p class="process-text">Lanzamos los sistemas, capacitamos a tu equipo y te acompañamos en la
-                        transición.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CLIENTS SECTION ========== -->
-    <section class="section" id="clientes" aria-label="Para quién trabajamos">
-        <div class="container">
-            <div class="clients-header reveal">
-                <h2 class="section-title">Para Quién Trabajamos</h2>
-                <p class="clients-tag">Negocios con visión de futuro</p>
-            </div>
-            <div class="clients-grid stagger-children reveal">
-                <div class="client-card">
-                    <div class="client-card-icon">
-                        <span class="material-symbols-outlined">sports_soccer</span>
-                    </div>
-                    <h5>Complejos deportivos</h5>
-                    <p>Gestión eficiente de canchas, turnos, membresías y comunicación con socios.</p>
-                </div>
-                <div class="client-card">
-                    <div class="client-card-icon">
-                        <span class="material-symbols-outlined">build</span>
-                    </div>
-                    <h5>Talleres y lubricentros</h5>
-                    <p>Seguimiento de reparaciones, stock de repuestos e historial de vehículos.</p>
-                </div>
-                <div class="client-card">
-                    <div class="client-card-icon">
-                        <span class="material-symbols-outlined">support_agent</span>
-                    </div>
-                    <h5>Negocios de servicios</h5>
-                    <p>Sistemas de atención, presupuestos y comunicación profesional con clientes.</p>
-                </div>
-                <div class="client-card">
-                    <div class="client-card-icon">
-                        <span class="material-symbols-outlined">trending_up</span>
-                    </div>
-                    <h5>Pymes en crecimiento</h5>
-                    <p>Bases sólidas para manejar la escala sin caos, con procesos claros y ordenados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== TESTIMONIALS SECTION ========== -->
-    <section class="section testimonials-section" id="testimonios" aria-label="Testimonios de nuestros clientes">
-        <div class="container">
-            <div class="text-center" style="margin-bottom:3.5rem;">
-                <span class="section-label reveal">Testimonios</span>
-                <h2 class="section-title reveal">Lo que dicen <span class="italic">nuestros clientes.</span></h2>
-            </div>
-            <div class="testimonials-grid stagger-children reveal">
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">Franco nos desarrolló un sistema a medida para el taller. Ahora trackeo
-                        cada reparación y tengo el stock al día. Imprescindible.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">EM</div>
-                        <div>
-                            <div class="testimonial-name">Emiliano M.</div>
-                            <div class="testimonial-role">Taller Mecánico Muñoz — Buenos Aires</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">Julieta nos armó la estrategia de redes desde cero. En 3 meses
-                        duplicamos nuestras consultas y ahora tenemos una identidad clara.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">LR</div>
-                        <div>
-                            <div class="testimonial-name">Laura R.</div>
-                            <div class="testimonial-role">Pastelería Delicias Las Moras — Buenos Aires</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-quote">"</div>
-                    <p class="testimonial-text">Nos ordenaron todo el sistema de turnos. Pasamos de un cuaderno a un
-                        panel digital en una semana. La diferencia es abismal.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">DG</div>
-                        <div>
-                            <div class="testimonial-name">Diego G.</div>
-                            <div class="testimonial-role">Complejo La Canchita de Núñez — Buenos Aires</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FAQ SECTION ========== -->
-    <section class="section faq-section" id="faq" aria-label="Preguntas frecuentes">
-        <div class="container">
-            <div class="text-center" style="margin-bottom:3rem;">
-                <span class="section-label reveal">FAQ</span>
-                <h2 class="section-title reveal">Preguntas <span class="italic">frecuentes.</span></h2>
-            </div>
-            <div class="faq-list reveal">
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿Qué tipo de sistemas desarrollan?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Desarrollamos sistemas de turnos, reservas y gestión adaptados a cada negocio.</p>
-                        <p>Por ejemplo:</p>
-                        <ul>
-                            <li>Reservas para canchas deportivas.</li>
-                            <li>Gestión de clientes para talleres y lubricentros.</li>
-                            <li>Seguimiento de servicios.</li>
-                            <li>Organización de tareas internas.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿El sistema es igual para todos?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>No.</p>
-                        <p>Cada negocio tiene una forma distinta de trabajar. Primero analizamos el funcionamiento
-                            actual y después desarrollamos una solución a medida.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿Puedo seguir usando WhatsApp?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí.</p>
-                        <p>El sistema no reemplaza la comunicación. Organiza la información para que no dependa solo de
-                            los mensajes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿También trabajan redes sociales?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sí.</p>
-                        <p>Además del desarrollo de sistemas, trabajamos la estrategia y gestión de comunicación para
-                            que el negocio atraiga y ordene consultas de forma profesional.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿Cuánto tiempo lleva implementarlo?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Depende del tipo de negocio y del sistema requerido.</p>
-                        <p>La implementación es progresiva y acompañada para que el equipo pueda adaptarse sin fricción.
-                        </p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>¿Cómo empiezo?</span>
-                        <span class="faq-icon material-symbols-outlined">add</span>
-                    </button>
-                    <div class="faq-answer">
-                        <p>El primer paso es una conversación.</p>
-                        <p>Analizamos cómo trabajás hoy y evaluamos qué se puede mejorar.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== SECOND CTA ========== -->
-    <section class="section cta-section cta-secondary" aria-label="Llamado a la acción secundario">
-        <div class="container">
-            <div class="cta-inner">
-                <h2 class="section-title reveal" style="margin-bottom:1.5rem;">
-                    ¿Querés ver cómo esto puede <span class="italic">aplicarse a tu negocio?</span>
-                </h2>
-                <p class="section-subtitle mx-auto reveal" style="text-align:center;margin-bottom:2.5rem;">
-                    Podemos analizar cómo funciona hoy tu negocio y proponerte una solución adaptada.
-                </p>
-                <a href="#contacto" class="btn-primary reveal">
-                    <span>Agendar una conversación</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CTA SECTION ========== -->
-    <section class="section cta-section" aria-label="Llamado a la acción">
-        <div class="container">
-            <div class="cta-inner">
-                <h2 class="section-title reveal" style="margin-bottom:1.5rem;">
-                    La tecnología es el medio.<br>
-                    <span class="italic">La estructura es el objetivo.</span>
-                </h2>
-                <p class="section-subtitle mx-auto reveal" style="text-align:center;">
-                    Hablemos para ordenar tu negocio y prepararlo para el siguiente nivel.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== CONTACT SECTION ========== -->
-    <section class="section" id="contacto" aria-label="Formulario de contacto">
-        <div class="container">
-            <div class="text-center" style="margin-bottom:3rem;">
-                <span class="section-label reveal">Contacto</span>
-                <h2 class="section-title reveal">Empecemos a <span class="italic">trabajar juntos.</span></h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-info reveal-left">
-                    <h3>¿Tenés un proyecto en mente?</h3>
-                    <p>Contanos sobre tu negocio y lo que necesitás. Te respondemos en menos de 24 horas con una
-                        propuesta personalizada.</p>
-
-                    <div class="contact-channels">
-                        <a href="https://wa.me/5491163515966" class="contact-channel" target="_blank" rel="noopener"
-                            id="contact-whatsapp">
-                            <svg class="contact-icon" viewBox="0 0 24 24" width="22" height="22" fill="#999">
-                                <path
-                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                            </svg>
-                            <div>
-                                <div class="contact-channel-text">WhatsApp</div>
-                                <div class="contact-channel-label">Respuesta inmediata</div>
-                            </div>
-                        </a>
-                        <a href="mailto:franco.coria.r@gmail.com" class="contact-channel" id="contact-email">
-                            <svg class="contact-icon" viewBox="0 0 24 24" width="22" height="22" fill="#999">
-                                <path
-                                    d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
-                            </svg>
-                            <div>
-                                <div class="contact-channel-text">franco.coria.r@gmail.com</div>
-                                <div class="contact-channel-label">Respuesta en 24hs</div>
-                            </div>
-                        </a>
-                        <a href="https://instagram.com/jf.digitalstudio" class="contact-channel" target="_blank"
-                            rel="noopener" id="contact-instagram">
-                            <svg class="contact-icon" viewBox="0 0 24 24" width="22" height="22" fill="#999">
-                                <path
-                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 100 12.324 6.162 6.162 0 100-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 11-2.88 0 1.441 1.441 0 012.88 0z" />
-                            </svg>
-                            <div>
-                                <div class="contact-channel-text">@jf.digitalstudio</div>
-                                <div class="contact-channel-label">Seguinos en Instagram</div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="reveal-right">
-                    <form class="contact-form" id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID"
-                        method="POST">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" id="form-name" name="nombre" placeholder=" " required
-                                    autocomplete="name">
-                                <label for="form-name">Nombre</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="form-email" name="email" placeholder=" " required
-                                    autocomplete="email">
-                                <label for="form-email">Email</label>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="form-business" name="negocio" placeholder=" "
-                                autocomplete="organization">
-                            <label for="form-business">Nombre del negocio</label>
-                        </div>
-                        <div class="form-group">
-                            <select id="form-service" name="servicio" required>
-                                <option value="" disabled selected>¿Qué servicio te interesa?</option>
-                                <option value="sistemas">Desarrollo de Sistemas</option>
-                                <option value="marketing">Marketing y Redes Sociales</option>
-                                <option value="ambos">Ambos (Sistemas + Marketing)</option>
-                                <option value="otro">Otro / No estoy seguro</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="form-message" name="mensaje" rows="4" placeholder=" " required></textarea>
-                            <label for="form-message">Contanos sobre tu proyecto</label>
-                        </div>
-                        <div class="form-submit">
-                            <button type="submit" class="btn-primary" id="form-submit-btn">
-                                <span>Enviar mensaje</span>
-                                <span class="material-symbols-outlined" style="font-size:1rem;">send</span>
-                            </button>
-                        </div>
-                    </form>
-
-                    <div class="form-success" id="form-success">
-                        <span class="material-symbols-outlined">check_circle</span>
-                        <h3>¡Mensaje enviado!</h3>
-                        <p>Te respondemos en menos de 24 horas. Gracias por confiar en JF Digital Studio.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== FOOTER ========== -->
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-brand-name">JF Studio</div>
-                    <p class="footer-brand-desc">
-                        Estrategia y sistemas para negocios reales que buscan crecer con orden y profesionalismo.
-                    </p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-col">
-                        <h6>Navegación</h6>
-                        <a href="#problema">El Problema</a>
-                        <a href="#que-hacemos">Qué Hacemos</a>
-                        <a href="#proceso">Cómo Trabajamos</a>
-                        <a href="#contacto">Contacto</a>
-                    </div>
-                    <div class="footer-col">
-                        <h6>Redes</h6>
-                        <a href="https://instagram.com/jf.digitalstudio" target="_blank" rel="noopener">Instagram</a>
-                        <a href="https://linkedin.com/company/jfdigitalstudio" target="_blank"
-                            rel="noopener">LinkedIn</a>
-                        <a href="https://wa.me/5491163515966" target="_blank" rel="noopener">WhatsApp</a>
-                    </div>
-                    <div class="footer-col">
-                        <h6>Legal</h6>
-                        <a href="#">Política de privacidad</a>
-                        <a href="#">Términos y condiciones</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copyright">
-                    &copy; 2026 JF Digital Studio. Todos los derechos reservados.
-                </p>
-                <p class="footer-location">
-                    Basado en Córdoba, Argentina.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ========== WHATSAPP FLOATING ========== -->
-    <a href="https://wa.me/5491163515966" class="whatsapp-float" target="_blank" rel="noopener"
-        aria-label="Contactar por WhatsApp" id="whatsapp-btn">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-        </svg>
-    </a>
-
-    <!-- ========== SCRIPTS ========== -->
-    <script src="main.js"></script>
-
+</script>
 </body>
-
 </html>
